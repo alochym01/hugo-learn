@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>position absolute & relative</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        position
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block relative-absolute">
+          <div class="block-inner">
+            <h2 class="block-title">
+              relative and absolute
+            </h2>
+            <div class="block-component">
+              <label class="relative-absolute-wrapper">
+                <input type="checkbox" class="relative-absolute-input" />
+                <header class="relative-absolute-button">
+                  <span class="relative-absolute-button-text">
+                    Select Country
+                  </span>
+                  <span
+                    class="relative-absolute-button-icon uil uil-angle-down"
+                  ></span>
+                </header>
+
+                <span class="relative-absolute-menu">
+                  <button class="relative-absolute-menu-button">
+                    <img
+                      class="relative-absolute-flag"
+                      src="https://flagcdn.com/w320/ar.png"
+                    />
+                    <span class="relative-absolute-flag-label">Argentina</span>
+                  </button>
+                  <button class="relative-absolute-menu-button">
+                    <img
+                      class="relative-absolute-flag"
+                      src="https://flagcdn.com/w320/gb.png"
+                    />
+                    <span class="relative-absolute-flag-label"
+                      >Great Britain</span
+                    >
+                  </button>
+                  <button class="relative-absolute-menu-button">
+                    <img
+                      class="relative-absolute-flag"
+                      src="https://flagcdn.com/w320/it.png"
+                    />
+                    <span class="relative-absolute-flag-label">Italy</span>
+                  </button>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.relative-absolute {
+              background: #222227;
+            }
+
+            .relative-absolute-wrapper {
+              position: relative;
+              cursor: pointer;
+            }
+
+            .relative-absolute-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .relative-absolute-menu,
+            .relative-absolute-button {
+              border-radius: 0.5rem;
+            }
+
+            .relative-absolute-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 18rem;
+              height: 4rem;
+              padding: 1rem 1rem 1rem 1.75rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .relative-absolute-button-icon {
+              font-size: 1.875rem;
+              transition: transform 0.35s;
+            }
+
+            .relative-absolute-button-text {
+              font-size: 1rem;
+            }
+
+            .relative-absolute-menu {
+              position: absolute;
+              z-index: 1;
+              top: 4.5rem;
+              left: 0;
+              display: block;
+              width: 100%;
+              padding: 1rem 0;
+              background: #5e2ea7;
+              opacity: 0;
+              visibility: hidden;
+              transform: translateY(1rem);
+              transition-property: transform, opacity, visibility;
+              transition-duration: 0.35s;
+            }
+
+            .relative-absolute-input:checked ~ .relative-absolute-menu {
+              visibility: visible;
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            .relative-absolute-input:checked
+              ~ .relative-absolute-button
+              .relative-absolute-button-icon {
+              transform: rotate(-180deg);
+            }
+
+            .relative-absolute-menu-button {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              height: 3rem;
+              padding: 0 1rem;
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .relative-absolute-flag {
+              width: 2rem;
+            }
+          </style>
+        </article>
+        <article class="block relative-z-index">
+          <div class="block-inner">
+            <h2 class="block-title">
+              relative and z-index
+            </h2>
+            <div class="block-component">
+              <div class="relative-z-index-wrapper">
+                <img
+                  class="relative-z-index-img"
+                  src="../assets/img/frontendjoe.png"
+                />
+                <img class="relative-z-index-img" src="../assets/img/dan.png" />
+                <img
+                  class="relative-z-index-img"
+                  src="../assets/img/mike.png"
+                />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.relative-z-index {
+              background: #222227;
+            }
+
+            .relative-z-index-wrapper {
+              margin-left: 4rem;
+            }
+
+            .relative-z-index-img {
+              position: relative;
+              background-clip: content-box;
+              width: 5rem;
+              height: 5rem;
+              border-radius: 50%;
+              border: 4px solid #222227;
+            }
+
+            .relative-z-index-img:not(:first-child) {
+              left: -2rem;
+            }
+
+            .relative-z-index-img:nth-child(1) {
+              z-index: 1;
+            }
+
+            .relative-z-index-img:nth-child(2) {
+              z-index: 2;
+              left: -2rem;
+            }
+
+            .relative-z-index-img:nth-child(3) {
+              z-index: 3;
+              left: -4rem;
+            }
+          </style>
+        </article>
+        <article class="block top-right-bottom-left">
+          <div class="block-inner">
+            <h2 class="block-title">
+              top, right, bottom and left
+            </h2>
+            <div class="block-component">
+              <div class="badge-wrapper">
+                <img class="badge-img" src="../assets/img/frontendjoe.png" />
+                <span class="badge"></span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.top-right-bottom-left {
+              background: #373942;
+            }
+
+            .badge-wrapper {
+              position: relative;
+              width: 5rem;
+              height: 5rem;
+            }
+
+            .badge-img {
+              width: 100%;
+              height: 100%;
+            }
+
+            .badge {
+              display: block;
+              position: absolute;
+              z-index: 1;
+              top: 0.5rem;
+              right: 0.5rem;
+              transform: translate(50%, -50%);
+              width: 1.25rem;
+              height: 1.25rem;
+              border-radius: 50%;
+              border: 4px solid #373942;
+              box-sizing: content-box;
+              background: #10b718;
+            }
+          </style>
+        </article>
+        <!-- Extra use cases -->
+        <article class="block ribbons">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Ribbons
+            </h2>
+            <div class="block-component">
+              <div class="ribbon-card">
+                <div class="ribbon">
+                  ELITE
+                </div>
+                <h2 class="ribbon-card-h2">
+                  React Course
+                </h2>
+                <h4 class="ribbon-card-h4">
+                  Learn React in 7 days
+                </h4>
+                <h3 class="ribbon-card-h3">
+                  £33
+                </h3>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.ribbons {
+              background: #222227;
+            }
+
+            .ribbon-card {
+              position: relative;
+              overflow: hidden;
+              width: 18rem;
+              padding: 1.5rem;
+              border-radius: 0.25rem;
+              background: #ffffff;
+            }
+
+            .ribbon-card-h2 {
+              font-size: 1.25rem;
+            }
+
+            .ribbon-card-h3 {
+              font-weight: 600;
+              font-size: 1.5rem;
+              color: #8f44fd;
+            }
+
+            .ribbon-card-h4 {
+              margin-bottom: 0.5rem;
+              font-size: 0.875rem;
+              color: #a19eab;
+            }
+
+            .ribbon {
+              position: absolute;
+              top: 0;
+              right: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 1.5rem;
+              padding: 0 2rem;
+              transform: rotate(45deg) translate(2rem, -0.75rem);
+              letter-spacing: 3px;
+              font-size: 0.75rem;
+              font-weight: 600;
+              color: #f7f7f7;
+              background: #8f44fd;
+              ribbon: none;
+            }
+          </style>
+        </article>
+        <article class="block floating-buttons">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Floating buttons
+            </h2>
+            <div class="block-component">
+              <div class="floating-button-card">
+                Success!
+                <button class="floating-button uil uil-times"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.floating-buttons {
+              background: #f7f7fe;
+            }
+
+            .block.floating-buttons .block-title {
+              color: #4c4954;
+            }
+
+            .floating-button-card {
+              position: relative;
+              width: 14rem;
+              padding: 1rem;
+              text-align: center;
+              color: rgba(255, 255, 255, 0.96);
+              background: #1ac0a2;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .floating-button {
+              position: absolute;
+              top: 50%;
+              right: 0.5rem;
+              transform: translateY(-50%);
+              font-size: 1.75rem;
+              color: inherit;
+            }
+          </style>
+        </article>
+        <article class="block checkboxes">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Hidden inputs
+            </h2>
+            <div class="block-component">
+              <label for="name">
+                <input
+                  name="name"
+                  id="name"
+                  type="checkbox"
+                  class="checkbox-input"
+                />
+                <span class="checkbox-background">
+                  <i class="checkbox-icon uil uil-check"></i>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.checkboxes {
+              background: #222227;
+            }
+
+            .checkbox-input {
+              /* This is the cleanest way to hide a default input control */
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .checkbox-input:checked ~ .checkbox-background {
+              background: #e7e7e7;
+            }
+
+            .checkbox-input:checked ~ .checkbox-background .checkbox-icon {
+              opacity: 0;
+            }
+
+            .checkbox-background {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 4rem;
+              height: 4rem;
+              border-radius: 0.75rem;
+              background: #8f44fd;
+              cursor: pointer;
+            }
+
+            .checkbox-icon {
+              font-size: 2.75rem;
+              color: white;
+            }
+          </style>
+        </article>
+        <article class="block underline">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Custom underlines
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <a class="underline-a">
+                  Hyperlink 1
+                </a>
+                <a class="underline-a underline-a--fromleft">
+                  Hyperlink 2
+                </a>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.underline {
+              background: #222227;
+            }
+
+            .underline-a {
+              position: relative;
+              margin: 0 1rem;
+              font-size: 1.25rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .underline-a:hover {
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .underline-a::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: -3px;
+              width: 100%;
+              height: 1px;
+              background: #ffffff;
+              transform: scaleX(0);
+              transition: transform 0.35s;
+            }
+
+            .underline-a--fromleft::after {
+              transform-origin: left;
+            }
+
+            .underline-a:hover::after {
+              transform: scaleX(1);
+            }
+          </style>
+        </article>
+        <article class="block shapes">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Custom shapes
+            </h2>
+            <div class="block-component">
+              <div class="shapes-wrapper">
+                <div class="shapes-block">
+                  <span class="shapes-block-text">
+                    1
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.shapes {
+              background: #8f44fd;
+            }
+
+            .shapes-wrapper {
+              position: relative;
+              display: flex;
+              justify-content: space-around;
+              width: 10rem;
+            }
+
+            .shapes-block {
+              display: grid;
+              place-items: center;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              background: #222227;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .shapes-block-text {
+              position: relative;
+              z-index: 1;
+              font-weight: 600;
+              font-size: 1rem;
+            }
+
+            .shapes-block::before,
+            .shapes-block::after {
+              content: "";
+              display: block;
+              position: absolute;
+              z-index: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 50%;
+              height: 6px;
+              border-radius: 3px;
+              background: #222227;
+            }
+
+            .shapes-block::before {
+              left: 0;
+            }
+
+            .shapes-block::after {
+              right: 0;
+              background: rgba(34, 34, 39, 0.25);
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

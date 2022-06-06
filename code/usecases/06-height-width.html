@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>height and width</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        height & width
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block height">
+          <div class="block-inner">
+            <h2 class="block-title">
+              height
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <input class="height-input" placeholder="Input" />
+                <button class="height-button">
+                  Button
+                </button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.height {
+              background: #f7f7fe;
+            }
+
+            .block.height .block-title {
+              color: #4c4954;
+            }
+
+            .height-button,
+            .height-input {
+              height: 3.5rem;
+              border-radius: 0.5rem;
+            }
+
+            .height-button {
+              min-width: 8rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .height-input {
+              min-width: 12rem;
+              text-indent: 1rem;
+              color: #4c4954;
+              background: #ffffff;
+              border: 2px solid #8f44fd;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+          </style>
+        </article>
+        <article class="block min-height">
+          <div class="block-inner">
+            <h2 class="block-title">
+              min-height
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <div class="min-height-card red">
+                  <span class="min-height-card-icon uil uil-multiply"></span>
+                  <p>
+                    Oops, we have encountered an unexpected error!
+                  </p>
+                </div>
+                <div class="min-height-card green">
+                  <span class="min-height-card-icon uil uil-check"></span>
+                  <p>
+                    Address details have been saved!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.min-height {
+              background: #373941;
+            }
+
+            .min-height-card {
+              display: flex;
+              flex-direction: column;
+              width: 12rem;
+              min-height: 12rem;
+              padding: 1.5rem 1rem;
+              color: #f9f9f9;
+              font-size: 1rem;
+            }
+
+            .min-height-card.red {
+              background: #f6506e;
+            }
+
+            .min-height-card.green {
+              background: #22bc7c;
+            }
+
+            .min-height-card-icon {
+              display: grid;
+              place-items: center;
+              width: 1.75rem;
+              min-width: 1.75rem;
+              max-width: 1.75rem;
+              height: 1.75rem;
+              min-height: 1.75rem;
+              max-height: 1.75rem;
+              margin-bottom: 1rem;
+              border-radius: 50%;
+              background: rgba(0, 0, 0, 0.16);
+              font-size: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block max-height">
+          <div class="block-inner">
+            <h2 class="block-title">
+              max-height
+            </h2>
+            <div class="block-component">
+              <label>
+                <input type="checkbox" class="max-height-input" />
+                <span class="max-height-card">
+                  <h3 class="max-height-header">Expand/collapse</h3>
+                  <p>
+                    You have just built your first custom made collapsible panel
+                    in pure CSS.
+                  </p>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.max-height {
+              background: #222227;
+            }
+
+            .max-height-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .max-height-input:checked + .max-height-card {
+              max-height: 200px;
+            }
+
+            .max-height-card {
+              display: block;
+              overflow: hidden;
+              max-width: 16rem;
+              max-height: 3.5rem;
+              padding: 0 1rem;
+              border-radius: 0.5rem;
+              color: #f9f9f9;
+              background: #313137;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+              font-size: 0.875rem;
+              transition: max-height 0.35s;
+            }
+
+            .max-height-header {
+              display: flex;
+              align-items: center;
+              height: 3.5rem;
+            }
+          </style>
+        </article>
+        <article class="block width">
+          <div class="block-inner">
+            <h2 class="block-title">
+              width
+            </h2>
+            <div class="block-component">
+              <div class="width-card">
+                <header class="width-header">
+                  <span>Login</span>
+                  <span class="uil uil-multiply"></span>
+                </header>
+                <div class="width-form">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Username"
+                  />
+                  <input
+                    class="form-control"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <button class="width-button form-control" type="button">
+                    <span>
+                      Let's go
+                    </span>
+                    <span class="uil uil-angle-right"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.width {
+              background: #373941;
+            }
+
+            .width-card {
+              width: 18rem;
+              padding: 0 1rem 1rem;
+              border-radius: 4px;
+              background: #28292f;
+            }
+
+            .width-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              height: 4rem;
+              color: #f9f9f9;
+              font-size: 0.875rem;
+            }
+
+            .width-form {
+              display: grid;
+              gap: 0.5rem;
+            }
+
+            .form-control {
+              height: 2.5rem;
+              padding: 0 0.5rem;
+              border-radius: 2px;
+              background: #4b4e59;
+              font-size: 0.875rem;
+            }
+
+            input.form-control::placeholder {
+              color: #a1a1a1;
+            }
+
+            .width-button {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              background: #8f44fd;
+              color: #f9f9f9;
+            }
+
+            .width-button .uil {
+              font-size: 1.5rem;
+            }
+          </style>
+        </article>
+        <article class="block max-width">
+          <div class="block-inner">
+            <h2 class="block-title">
+              max-width
+            </h2>
+            <div class="block-component">
+              <div class="max-width-card">
+                <div class="max-width-wrapper">
+                  <h2 class="max-width-h2">
+                    44523 Leyton Avenue, Gillingham
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.max-width {
+              background: #f7f7fe;
+            }
+
+            .block.max-width .block-title {
+              color: #4c4954;
+            }
+
+            .max-width-card {
+              display: flex;
+              align-items: center;
+              max-width: 16rem; /* Setting max-width on the parent card will cause overflow */
+              padding: 1rem;
+              border-left: 0.5rem solid #1ac0a2;
+              color: #4c4954;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(0, 0, 0, 0.09);
+            }
+
+            .max-width-wrapper {
+              min-width: 0; /* This min-width trick is specific to flexbox and must be on the parent div for it to work */
+            }
+
+            .max-width-h2 {
+              font-size: 1rem;
+              /* Tidy up the overflow with an ellipsis - using this property combo */
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          </style>
+        </article>
+        <article class="block min-width">
+          <div class="block-inner">
+            <h2 class="block-title">
+              min-width
+            </h2>
+            <div class="block-component">
+              <div class="min-width-wrapper">
+                <button class="min-width-button">Ok</button>
+                <button class="min-width-button">Back</button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.min-width {
+              background: #55a98e;
+            }
+
+            .min-width-wrapper {
+              display: flex;
+              gap: 0.5rem;
+            }
+
+            .min-width-button {
+              height: 2.5rem;
+              min-width: 6rem;
+              border-radius: 4px;
+              background: #313137;
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block width-min-max">
+          <div class="block-inner">
+            <h2 class="block-title">
+              width, min and max
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <div class="width-min-max-card">
+                  <table class="width-min-max-table">
+                    <thead>
+                      <tr>
+                        <th class="width-min-max-column">
+                          Fixed width column
+                        </th>
+                        <th>
+                          Age
+                        </th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="width-min-max-column">
+                          John Smith
+                        </td>
+                        <td>
+                          32
+                        </td>
+                        <td>
+                          <span class="material-icons">toggle_on</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="width-min-max-column">
+                          Elvis Harris
+                        </td>
+                        <td>
+                          24
+                        </td>
+                        <td>
+                          <span class="material-icons">toggle_on</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.width-min-max {
+              background: #5e2aab;
+            }
+
+            .width-min-max-card {
+              padding: 1rem;
+              margin: 0 0.5rem;
+              line-height: 1;
+              border-radius: 0.75rem;
+              background: #ffffff;
+              color: #45424d;
+            }
+
+            .width-min-max-table {
+              width: 100%;
+              border-collapse: collapse;
+              background: white;
+            }
+
+            .width-min-max-table .material-icons {
+              color: #a19eab;
+              font-size: 2rem;
+            }
+
+            .width-min-max-table th {
+              font-weight: 400;
+              font-size: 0.875rem;
+              color: #a19eab;
+              height: 1.75rem;
+            }
+
+            .width-min-max-table td {
+              height: 4rem;
+            }
+
+            .width-min-max-table td:last-child {
+              text-align: right;
+            }
+
+            .width-min-max-table--middle td {
+              width-min-max: top;
+            }
+
+            .width-min-max-column {
+              width: 12rem;
+              min-width: 12rem;
+              max-width: 12rem;
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

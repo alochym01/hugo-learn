@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Box shadow</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        box-shadow
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block elevated-elements">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Elevated Elements
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <div class="elevated-elements-card">
+                  <h2 class="elevated-elements-h2">
+                    Technical skills
+                  </h2>
+                  <button class="overlapping-fab uil uil-bars"></button>
+                  <ul class="elevated-elements-ul">
+                    <li>
+                      Googling
+                    </li>
+                    <li>
+                      YouTubing
+                    </li>
+                    <li>
+                      Stack overflowing
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.elevated-elements {
+              background: #222227;
+            }
+
+            .elevated-elements-card {
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              width: 18rem;
+              border-radius: 0.5rem;
+              background: #ffffff;
+              color: rgba(0, 0, 0, 0.75);
+            }
+
+            .elevated-elements-ul {
+              list-style: "🔥";
+              margin: -2rem 0 1rem;
+              padding: 0;
+              padding-left: 2rem;
+            }
+
+            .elevated-elements-ul li {
+              padding-left: 0.5rem;
+            }
+
+            .elevated-elements-h2 {
+              padding: 1rem;
+              font-size: 1rem;
+              background: #8f44fd;
+              color: white;
+            }
+
+            .overlapping-fab {
+              align-self: flex-end;
+              width: 3rem;
+              height: 3rem;
+              margin-right: 1rem;
+              border-radius: 50%;
+              font-size: 1.25rem;
+              background: #f03ec9;
+              color: rgba(255, 255, 255, 0.96);
+              transform: translateY(-50%);
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+            }
+          </style>
+        </article>
+        <article class="block elevated-elements-2">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Elevated Elements
+            </h2>
+            <div class="block-component">
+              <div class="floating-button-wrapper">
+                <span class="skeleton-rect-md"></span>
+                <span class="skeleton-square"></span>
+                <span class="skeleton-square"></span>
+                <button class="floating-button uil uil-plus"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.elevated-elements-2 {
+              background: #8f44fd;
+            }
+
+            .floating-button-wrapper {
+              position: relative;
+              overflow: hidden;
+              width: 20rem;
+              height: 12rem;
+              padding: 1rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #eeeefa;
+            }
+
+            .floating-button {
+              position: absolute;
+              bottom: 1.5rem;
+              right: 2rem;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              font-size: 1.5rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+              box-shadow: 0 0.875rem 1.5rem rgba(0, 0, 0, 0.2);
+            }
+          </style>
+        </article>
+        <article class="block outlined-controls">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Outlined controls
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <button class="outlined-controls-button">
+                  <span
+                    class="outlined-controls-button-icon uil uil-plus"
+                  ></span>
+                  <span class="outlined-controls-button-text">
+                    Click Me
+                  </span>
+                </button>
+                <input
+                  class="outlined-controls-input"
+                  placeholder="Start Typing"
+                />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.outlined-controls {
+              background: #222227;
+            }
+
+            .outlined-controls-button,
+            .outlined-controls-input {
+              height: 4rem;
+              width: 11rem;
+              border-radius: 0.5rem;
+              background: #100f10;
+              transition: box-shadow 0.35s;
+            }
+
+            .outlined-controls-button:focus,
+            .outlined-controls-input:focus {
+              box-shadow: 0 0 0 3px #8f44fd;
+            }
+
+            .outlined-controls-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              height: 4rem;
+              padding: 1rem 2.25rem 1rem 1.5rem;
+              border-radius: 0.5rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .outlined-controls-button-icon {
+              font-size: 1.5rem;
+            }
+
+            .outlined-controls-button-text {
+              font-size: 1rem;
+            }
+
+            .outlined-controls-input {
+              padding: 0 1.5rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+          </style>
+        </article>
+        <article class="block neumorphism">
+          <div class="block-inner">
+            <h2 class="block-title">Neumorphism</h2>
+            <div class="block-component">
+              <label class="neu-switch-label" for="neu-switch-input">
+                <input
+                  id="neu-switch-input"
+                  type="checkbox"
+                  class="neu-switch-input"
+                />
+                <span class="neu-switch-rail">
+                  <span class="neu-switch-handle"></span>
+                </span>
+                <span class="neu-switch-indicator"></span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.neumorphism {
+              background: #6328b9;
+            }
+
+            .neu-switch-label {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              height: 5rem;
+              padding: 0 1.5rem;
+              border-radius: 0.75rem;
+              background: #6328b9;
+              box-shadow: 12px 12px 30px #5623a1, -12px -12px 30px #702dd1;
+              cursor: pointer;
+            }
+
+            .neu-switch-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .neu-switch-input:checked ~ .neu-switch-rail .neu-switch-handle {
+              transform: translate(3.75rem, -50%);
+            }
+
+            .neu-switch-input:checked ~ .neu-switch-indicator {
+              background: #46f608;
+            }
+
+            .neu-switch-rail {
+              position: relative;
+              display: block;
+              width: 6rem;
+              height: 1.75rem;
+              border-radius: 1rem;
+              background: rgba(255, 255, 255, 0.1);
+            }
+
+            .neu-switch-handle {
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              display: block;
+              width: 2.25rem;
+              height: 2.25rem;
+              border-radius: 50%;
+              background: linear-gradient(45deg, #ffffff, #aeaeae);
+              transition: transform 0.45s;
+            }
+
+            .neu-switch-indicator {
+              width: 0.75rem;
+              height: 0.75rem;
+              margin-left: 1.5rem;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.1);
+              transition: background 0.45s;
+            }
+          </style>
+        </article>
+        <!-- Extra use cases -->
+        <article class="block pulse">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Pulse effect
+            </h2>
+            <div class="block-component">
+              <div class="pulse-badge">9</div>
+            </div>
+          </div>
+          <style>
+            .block.pulse {
+              background: #373942;
+            }
+
+            @keyframes pulse {
+              0% {
+                box-shadow: 0 0 0 0 rgba(241, 73, 100, 0.5);
+              }
+              100% {
+                box-shadow: 0 0 0 28px rgba(241, 73, 100, 0);
+              }
+            }
+
+            .pulse-badge {
+              position: relative;
+              display: grid;
+              place-items: center;
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              background: #f14964;
+              color: rgba(255, 255, 255, 0.96);
+              animation: pulse 2s infinite;
+            }
+          </style>
+        </article>
+        <article class="block floating-navs">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Floating navs
+            </h2>
+            <div class="block-component">
+              <div class="floating-nav-wrapper">
+                <nav class="floating-nav-bar">
+                  <button class="floating-nav-bar-button uil uil-bars"></button>
+                  <h2 class="floating-nav-bar-h2">
+                    App Title
+                  </h2>
+                </nav>
+                <section class="floating-nav-content">
+                  <span class="skeleton-rect-md"></span>
+                  <span class="skeleton-square"></span>
+                </section>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.floating-navs {
+              background: #f7f7ff;
+            }
+
+            .block.floating-navs .block-title {
+              color: #4c4954;
+            }
+
+            .floating-nav-wrapper {
+              overflow: hidden;
+              width: 20rem;
+              height: 12rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #eeeefa;
+            }
+
+            .floating-nav-bar {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              height: 3rem;
+              padding: 0 1rem;
+              background: #ffffff;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+            }
+
+            .floating-nav-bar-h2 {
+              font-weight: 600;
+              font-size: 0.625rem;
+            }
+
+            .floating-nav-content {
+              padding: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block slider-3d">
+          <div class="block-inner">
+            <h2 class="block-title">
+              3D sliders
+            </h2>
+            <div class="block-component">
+              <input class="slider-3d-input" type="range" />
+            </div>
+          </div>
+          <style>
+            .block.slider-3d {
+              background: #242429;
+            }
+
+            .slider-3d-input {
+              appearance: none;
+              width: 18rem;
+              height: 3rem;
+              border-radius: 1.5rem;
+              background: #2b2d32;
+              box-shadow: inset 14px 14px 29px #1b1b1e,
+                inset -14px -14px 29px #333439;
+            }
+
+            .slider-3d-input::-webkit-slider-thumb {
+              appearance: none;
+              width: 2.5rem;
+              height: 2.5rem;
+              border-radius: 50%;
+              background: radial-gradient(
+                circle at 20%,
+                /* This argument allows us set the X offset of the circle, try toggling the 20% */
+                  #d8d7d7 0%,
+                #626262 50%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              cursor: grab;
+              transition: all 0.375s;
+            }
+          </style>
+        </article>
+        <article class="block moon">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Moon
+            </h2>
+            <div class="block-component">
+              <div class="moon-wrapper"></div>
+            </div>
+          </div>
+          <style>
+            .block.moon {
+              background: #373942;
+            }
+
+            .moon-wrapper {
+              transform: translate(-15px, -15px);
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              box-shadow: 15px 15px 0 0 #eee9a3;
+            }
+          </style>
+        </article>
+        <article class="block flower-spinner">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Flower spinner
+            </h2>
+            <div class="block-component">
+              <div class="flower"></div>
+            </div>
+          </div>
+          <style>
+            .block.flower-spinner {
+              background: #222227;
+            }
+
+            * {
+              box-sizing: border-box;
+            }
+
+            html,
+            body {
+              height: 100%;
+            }
+
+            body {
+              display: grid;
+              place-items: center;
+              background: #1d1e22;
+            }
+
+            .flower {
+              transform-origin: 50% 50%;
+              width: 28px;
+              height: 28px;
+              border-radius: 50%;
+              background: #d263d4;
+              box-shadow: -16px -16px 0 4px #eab0eb, 16px -16px 0 4px #eab0eb,
+                16px 16px 0 4px #eab0eb, -16px 16px 0 4px #eab0eb;
+              animation: flowerKeyframes 5s infinite ease-in-out;
+            }
+
+            @keyframes flowerKeyframes {
+              0% {
+                transform: rotate(0deg);
+                box-shadow: -16px -16px 0 4px #eab0eb, 16px -16px 0 4px #eab0eb,
+                  16px 16px 0 4px #eab0eb, -16px 16px 0 4px #eab0eb;
+              }
+              50% {
+                transform: rotate(1080deg);
+                box-shadow: 16px 16px 0 4px #eab0eb, -16px 16px 0 4px #eab0eb,
+                  -16px -16px 0 4px #eab0eb, 16px -16px 0 4px #eab0eb;
+              }
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

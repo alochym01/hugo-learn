@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Border radius</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        border-radius
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block clean-cards">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Clean cards
+            </h2>
+            <div class="block-component">
+              <div class="clean-card">
+                <span class="clean-card-text">
+                  Free burgers
+                </span>
+                <span class="clean-card-icon">
+                  <span class="clean-card-emoji">
+                    🍔
+                  </span>
+                  <span class="clean-card-badge"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.clean-cards {
+              background: #f7f7fe;
+            }
+
+            .block.clean-cards .block-title {
+              color: #4c4954;
+            }
+
+            .clean-card {
+              display: flex;
+              gap: 1.25rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 16rem;
+              padding: 1rem 1.5rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .clean-card-text {
+              font-size: 1.125rem;
+              font-weight: 200;
+            }
+
+            .clean-card-icon {
+              flex: 0 0 3rem;
+              position: relative;
+              display: grid;
+              place-items: center;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 0.5rem;
+              background: #f7f7fe;
+            }
+
+            .clean-card-emoji {
+              font-size: 1.25rem;
+            }
+
+            .clean-card-badge {
+              display: block;
+              position: absolute;
+              top: -0.25rem;
+              right: -0.25rem;
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              border: 2px solid #ffffff;
+              background: #8f44fd;
+            }
+          </style>
+        </article>
+        <article class="block rounded-controls">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Rounded controls
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <button class="rounded-controls-button">
+                  <span class="rounded-controls-button-text">
+                    Continue
+                  </span>
+                  <span
+                    class="rounded-controls-button-icon uil uil-arrow-right"
+                  ></span>
+                </button>
+                <span class="rounded-controls-textbox">
+                  <span
+                    class="rounded-controls-textbox-icon uil uil-lock"
+                  ></span>
+                  <input
+                    type="password"
+                    value="Password1"
+                    class="rounded-controls-textbox-input"
+                    placeholder="Search"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.rounded-controls {
+              background: #222227;
+            }
+
+            .rounded-controls-button,
+            .rounded-controls-textbox {
+              height: 4rem;
+              border-radius: 2rem;
+            }
+
+            .rounded-controls-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              width: 11rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .rounded-controls-button-icon {
+              font-size: 1.75rem;
+            }
+
+            .rounded-controls-button-text {
+              font-size: 1rem;
+              margin-left: 0.5rem;
+            }
+
+            .rounded-controls-textbox {
+              display: flex;
+              align-items: center;
+              width: 14rem;
+              padding-right: 1rem;
+              background: transparent;
+              border: 2px solid #8f44fd;
+            }
+
+            .rounded-controls-textbox-icon {
+              display: grid;
+              place-items: center;
+              flex: 0 0 4rem;
+              font-size: 1.5rem;
+              color: #f9f9f9;
+            }
+
+            .rounded-controls-textbox-input {
+              flex: 1 1 auto;
+              align-self: stretch;
+              min-width: 0;
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block abstract-controls">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Abstract controls
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <button class="abstract-controls-button">
+                  <span class="abstract-controls-button-text">
+                    Continue
+                  </span>
+                  <span
+                    class="abstract-controls-button-icon uil uil-arrow-right"
+                  >
+                  </span>
+                </button>
+                <span class="abstract-controls-textbox">
+                  <span
+                    class="abstract-controls-textbox-icon uil uil-search"
+                  ></span>
+                  <input
+                    class="abstract-controls-textbox-input"
+                    placeholder="Search"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.abstract-controls {
+              background: #222227;
+            }
+
+            .abstract-controls-button,
+            .abstract-controls-textbox {
+              height: 4rem;
+              border-radius: 1.5rem 0.25rem;
+            }
+
+            .abstract-controls-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              width: 11rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .abstract-controls-button-icon {
+              font-size: 1.75rem;
+            }
+
+            .abstract-controls-button-text {
+              font-size: 1rem;
+            }
+
+            .abstract-controls-textbox {
+              display: flex;
+              align-items: center;
+              width: 14rem;
+              padding-right: 1rem;
+              border: 2px solid #8f44fd;
+            }
+
+            .abstract-controls-textbox-icon {
+              display: grid;
+              place-items: center;
+              flex: 0 0 4rem;
+              font-size: 1.5rem;
+              color: #f9f9f9;
+            }
+
+            .abstract-controls-textbox-input {
+              flex: 1 1 auto;
+              min-width: 0;
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block chat-bubbles">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Chat bubbles
+            </h2>
+            <div class="block-component">
+              <div class="chat-bubble">
+                What can I teach you?
+
+                <button class="chat-close uil uil-multiply"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.chat-bubbles {
+              background: #373942;
+            }
+
+            .chat-bubble {
+              position: relative;
+              display: grid;
+              place-items: center;
+              width: 14rem;
+              height: 4rem;
+              border-radius: 2rem 2rem 0;
+              color: rgba(255, 255, 255, 0.96);
+              background: #1ac0a2;
+            }
+
+            .chat-close {
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(40%, -40%);
+              display: grid;
+              place-items: center;
+              width: 2.25rem;
+              height: 2.25rem;
+              border-radius: 50%;
+              font-size: 1.25rem;
+              background: #222227;
+              color: rgba(255, 255, 255, 0.96);
+            }
+          </style>
+        </article>
+        <article class="block rounded-end">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Rounded end
+            </h2>
+            <div class="block-component">
+              <nav class="rounded-end-nav">
+                <button class="rounded-end-nav-button">
+                  About
+                </button>
+                <button
+                  class="rounded-end-nav-button rounded-end-nav-button--rounded-end"
+                >
+                  Portfolio
+                </button>
+                <button class="rounded-end-nav-button">
+                  Skills
+                </button>
+              </nav>
+            </div>
+          </div>
+          <style>
+            .block.rounded-end {
+              background: #f7f7fe;
+            }
+
+            .block.rounded-end .block-title {
+              color: #4c4954;
+            }
+
+            .rounded-end-nav {
+              width: 12rem;
+            }
+
+            .rounded-end-nav-button {
+              position: relative;
+              display: block;
+              width: 100%;
+              height: 3rem;
+              padding: 0 1rem;
+              text-align: left;
+            }
+
+            .rounded-end-nav-button--rounded-end {
+              border-top-right-radius: 1.5rem;
+              border-bottom-right-radius: 1.5rem;
+              color: #8f44fd;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .rounded-end-nav-button--rounded-end::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              right: 1.25rem;
+              transform: translateY(-50%);
+              width: 0.625rem;
+              height: 0.625rem;
+              border-radius: 50%;
+              background: #8f44fd;
+            }
+          </style>
+        </article>
+        <article class="block rounded-corner">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Rounded corner
+            </h2>
+            <div class="block-component">
+              <div class="rounded-corner-card">
+                <div class="rounded-corner-card-label">
+                  FREE
+                </div>
+
+                <span class="rounded-corner-icon uil uil-rocket"></span>
+                <span class="rounded-corner-text">Build Dashboards</span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.rounded-corner {
+              background: #5e29ab;
+            }
+
+            .rounded-corner-card {
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+              width: 18rem;
+              height: 6rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #381a64;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .rounded-corner-card-label {
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: grid;
+              place-items: center;
+              height: 2rem;
+              padding-left: 0.5rem;
+              padding-right: 1.5rem;
+              border-bottom-right-radius: 2rem;
+              font-size: 0.875rem;
+              font-weight: 600;
+              letter-spacing: 2px;
+              background: #8f44fd;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .rounded-corner-icon {
+              font-size: 1.5rem;
+            }
+          </style>
+        </article>
+        <article class="block circle-shape">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Circle shapes
+            </h2>
+            <div class="block-component">
+              <button class="circle-shape-button">
+                <span class="circle-shape-badge"></span>
+                <span class="circle-shape-dots"></span>
+              </button>
+            </div>
+          </div>
+          <style>
+            .block.circle-shape {
+              background: #4c229a;
+            }
+
+            .circle-shape-button {
+              position: relative;
+              display: grid;
+              place-items: center;
+              width: 4rem;
+              height: 4rem;
+              border-radius: 50%;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .circle-shape-badge {
+              position: absolute;
+              top: -4px;
+              right: -4px;
+              display: block;
+              width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              border: 3px solid #4c229a;
+              background: #1ac0a2;
+            }
+
+            .circle-shape-dots {
+              display: block;
+              position: relative;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: rgba(255, 255, 255, 0.96);
+            }
+
+            .circle-shape-dots::before,
+            .circle-shape-dots::after {
+              content: "";
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              width: inherit;
+              height: inherit;
+              border-radius: inherit;
+              background: inherit;
+            }
+
+            .circle-shape-dots::before {
+              top: -10px;
+            }
+
+            .circle-shape-dots::after {
+              top: 10px;
+            }
+          </style>
+        </article>
+        <article class="block semi-circle-shapes">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Semi-circle shapes
+            </h2>
+            <div class="block-component">
+              <div class="semi-circle-shapes-wrapper">
+                <div class="semi-circle-shapes-fill">
+                  75%
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.semi-circle-shapes {
+              background: #f7f7fe;
+            }
+
+            .block.semi-circle-shapes .block-title {
+              color: #4c4954;
+            }
+
+            .semi-circle-shapes-wrapper {
+              position: relative;
+              overflow: hidden;
+              width: 10rem;
+              height: 5rem;
+              border-bottom-left-radius: 5rem;
+              border-bottom-right-radius: 5rem;
+              background: #d5e9f6;
+            }
+
+            .semi-circle-shapes-fill {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 75%;
+              display: grid;
+              place-items: center;
+              font-weight: 600;
+              font-size: 1.25rem;
+              background: #90d2fb;
+            }
+          </style>
+        </article>
+        <!-- Extra use cases -->
+        <article class="block progress-bars">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Progress bars
+            </h2>
+            <div class="block-component">
+              <div class="progress-rail">
+                <div class="progress-bar"></div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.progress-bars {
+              background: #222227;
+            }
+
+            .progress-rail {
+              display: flex;
+              width: 16rem;
+              height: 1rem;
+              border-radius: 0.5rem;
+              background: rgba(255, 255, 255, 0.1);
+            }
+
+            @keyframes move {
+              0% {
+                width: 0%;
+              }
+              33% {
+                width: 33%;
+              }
+              66% {
+                width: 66%;
+              }
+              100% {
+                width: 100%;
+              }
+            }
+
+            .progress-bar {
+              width: 25%;
+              height: 1rem;
+              border-radius: 0.5rem;
+              background: #1ac0a2;
+              animation: move 5s infinite;
+            }
+          </style>
+        </article>
+        <article class="block clean-controls">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Clean controls
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <button class="clean-button">
+                  <span class="clean-button-text">
+                    Import
+                  </span>
+                  <span class="clean-button-icon uil uil-import"></span>
+                </button>
+                <span class="clean-textbox">
+                  <span class="clean-textbox-icon uil uil-lock"></span>
+                  <input
+                    type="password"
+                    value="Password1"
+                    class="clean-textbox-input"
+                    placeholder="Search"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.clean-controls {
+              background: #373942;
+            }
+
+            .clean-button,
+            .clean-textbox {
+              height: 4rem;
+              border-radius: 0.5rem;
+            }
+
+            .clean-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              width: 11rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #1ac0a2;
+            }
+
+            .clean-button-icon {
+              font-size: 1.25rem;
+            }
+
+            .clean-button-text {
+              font-size: 1rem;
+            }
+
+            .clean-textbox {
+              display: flex;
+              align-items: center;
+              width: 14rem;
+              padding-right: 1rem;
+              background: transparent;
+              color: #1ac0a2;
+              border: 2px solid #1ac0a2;
+            }
+
+            .clean-textbox-icon {
+              display: grid;
+              place-items: center;
+              flex: 0 0 auto;
+              width: 3rem;
+              font-size: 1.25rem;
+            }
+
+            .clean-textbox-input {
+              flex: 1 1 auto;
+              align-self: stretch;
+              min-width: 0;
+              color: #1ac0a2;
+            }
+          </style>
+        </article>
+        <article class="block notches">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Notches
+            </h2>
+            <div class="block-component">
+              <nav class="notches-nav">
+                <span class="notches-cutout"></span>
+                <button class="notches-button uil uil-estate"></button>
+                <button class="notches-button uil uil-setting"></button>
+              </nav>
+            </div>
+          </div>
+          <style>
+            .block.notches {
+              background: #2aab8c;
+            }
+
+            .notches-nav {
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              width: 14rem;
+              padding: 0.75rem 1.5rem;
+              border-radius: 1rem;
+              color: #4c4954;
+              background: #222227;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .notches-cutout {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 3.5rem;
+              height: 1.75rem;
+              border-bottom-right-radius: 1.75rem;
+              border-bottom-left-radius: 1.75rem;
+              background: #2aab8c;
+            }
+
+            .notches-button {
+              font-size: 1.75rem;
+              color: #ffffff;
+              opacity: 0.5;
+              transition: opacity 0.35s;
+            }
+
+            .notches-button:hover {
+              opacity: 1;
+            }
+          </style>
+        </article>
+        <article class="block responsive">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Responsive
+            </h2>
+            <div class="block-component">
+              <button class="responsive-badge uil uil-react"></button>
+            </div>
+          </div>
+          <style>
+            .block.responsive {
+              background: #222227;
+            }
+
+            .responsive-badge {
+              display: grid;
+              place-items: center;
+              border-radius: 2vw;
+              width: 8vw;
+              height: 8vw;
+              transform: rotate(45deg);
+              font-size: 4.75vw;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+          </style>
+        </article>
+        <article class="block plump-buttons">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Plump buttons
+            </h2>
+            <div class="block-component">
+              <div class="plump-wrapper">
+                <button class="plump-button">
+                  <span class="plump-button-icon uil uil-times-circle"></span>
+                  <span class="plump-button-text">
+                    Cancel
+                  </span>
+                </button>
+                <button class="plump-button primary">
+                  <span class="plump-button-icon uil uil-shopping-bag"></span>
+                  <span class="plump-button-text">
+                    Buy Now
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.plump-buttons {
+              background: #19191d;
+            }
+
+            .plump-wrapper {
+              display: flex;
+              gap: 2rem;
+            }
+
+            .plump-button {
+              position: relative;
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              justify-content: center;
+              height: 4.5rem;
+              padding: 0 1.75rem 0 1.5rem;
+              border-radius: 50% / 10%;
+              background: #2c2c31;
+              color: #f9f9f9;
+              transition: all 0.375s;
+            }
+
+            .plump-button:hover {
+              background: #39393e;
+            }
+
+            .plump-button.primary {
+              background: #2165ca;
+            }
+
+            .plump-button.primary:hover {
+              background: #337ff0;
+            }
+
+            .plump-button::before {
+              content: "";
+              position: absolute;
+              z-index: 1;
+              top: 10%;
+              bottom: 10%;
+              right: -5%;
+              left: -5%;
+              background: inherit;
+              border-radius: 5% / 50%;
+            }
+
+            .plump-button-text {
+              position: relative;
+              z-index: 2;
+            }
+
+            .plump-button-icon {
+              position: relative;
+              z-index: 2;
+              font-size: 1.5rem;
+            }
+          </style>
+        </article>
+        <article class="block organic-blobs">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Organic blobs
+            </h2>
+            <div class="block-component">
+              <div class="blob">
+                <img class="blob-img" src="../assets/img/joe-outline.png" />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.organic-blobs {
+              background: #222227;
+            }
+
+            .blob {
+              overflow: hidden;
+              position: relative;
+              top: 30px;
+              transform: rotate(-8deg);
+              width: 200px;
+              height: 200px;
+              border-radius: 70% 40% 30% 80% / 55% 45% 60% 50%;
+              background: #8f44fd;
+              animation: morph 3s linear infinite;
+            }
+
+            .blob-img {
+              position: absolute;
+              z-index: 1;
+              right: -10px;
+              bottom: -15px;
+              transform: rotate(8deg);
+              width: 200px;
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

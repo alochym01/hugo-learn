@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>selectors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/layout.css" />
+    <link rel="stylesheet" href="../../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        Selectors
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block chained">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Chained
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <button class="primary-button">
+                  <span class="primary-button-icon uil uil-copy"></span>
+                  <span class="primary-button-text">
+                    Copy
+                  </span>
+                </button>
+                <button class="primary-button loading chained-button-">
+                  <span class="primary-button-icon uil uil-copy"></span>
+                  <span class="primary-button-text">
+                    Copy
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.chained {
+              background: #222227;
+            }
+
+            .primary-button {
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              justify-content: center;
+              height: 4rem;
+              padding: 1rem 2.25rem 1rem 2rem;
+              border-radius: 3px;
+              color: #f7f7f7;
+              background: #8f44fd;
+            }
+
+            /* Styles when both these classes are applied */
+            .primary-button.loading {
+              cursor: wait;
+              color: rgba(255, 255, 255, 0.375);
+              background: repeating-linear-gradient(
+                60deg,
+                #8f44fd 0 0.75rem,
+                #7a37dd 0.75rem 1.5rem
+              );
+            }
+
+            .primary-button-icon {
+              font-size: 1.5rem;
+            }
+
+            .primary-button-text {
+              font-size: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block child">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Child
+            </h2>
+            <div class="block-component">
+              <div class="child-avatar online">
+                <img
+                  class="child-avatar-img"
+                  src="../assets/img/frontendjoe.png"
+                />
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.child {
+              background: #222227;
+            }
+
+            .child-avatar {
+              position: relative;
+            }
+
+            .child-avatar-img {
+              width: 5rem;
+              height: 5rem;
+              padding: 4px;
+              border-radius: 50%;
+              border: 0.1rem solid #8f44fd;
+            }
+
+            /* Style the badge by targeting and child span elements */
+            .child-avatar span {
+              display: block;
+              position: absolute;
+              z-index: 1;
+              top: 0.75rem;
+              right: 0.75rem;
+              transform: translate(50%, -50%);
+              width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              border: 4px solid #222227;
+              background: #888888;
+            }
+
+            /* Style the badge when parent has "online" class */
+            .child-avatar.online span {
+              background: #10b718;
+            }
+          </style>
+        </article>
+        <article class="block child">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Direct Child
+            </h2>
+            <div class="block-component">
+              <div class="direct-child-avatar online">
+                <img
+                  class="direct-child-avatar-img"
+                  src="../assets/img/mike.png"
+                />
+                <span>
+                  <span>3</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.child {
+              background: #222227;
+            }
+
+            .direct-child-avatar {
+              position: relative;
+            }
+
+            .direct-child-avatar-img {
+              width: 5rem;
+              height: 5rem;
+              border-radius: 50%;
+            }
+
+            /* Style the badge by targeting any direct child span elements */
+            .direct-child-avatar > span {
+              display: grid;
+              place-items: center;
+              position: absolute;
+              z-index: 1;
+              top: 0.75rem;
+              right: 0.75rem;
+              transform: translate(50%, -50%);
+              width: 1.5rem;
+              height: 1.5rem;
+              border-radius: 50%;
+              border: 4px solid #222227;
+              background: #888888;
+              font-size: 0.625rem;
+            }
+
+            /* Style the badge when parent has "online" class */
+            .direct-child-avatar.online > span {
+              background: #d420fb;
+            }
+
+            /* Style the badge text when parent has "online" class */
+            .direct-child-avatar.online > span > span {
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block adjacent-sibling">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Adjacent Sibling
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <span class="adjacent-sibling-textbox">
+                  <input
+                    placeholder="Username"
+                    class="adjacent-sibling-textbox-input"
+                  />
+                  <span
+                    class="adjacent-sibling-textbox-icon uil uil-user"
+                  ></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.adjacent-sibling {
+              background: #222227;
+            }
+
+            .adjacent-sibling-textbox {
+              display: flex;
+              align-items: center;
+              padding: 0 1rem;
+              background: #121315;
+            }
+
+            .adjacent-sibling-textbox-icon {
+              font-size: 1.5rem;
+              color: #757575;
+            }
+
+            .adjacent-sibling-textbox-input {
+              width: 10rem;
+              height: 4rem;
+              border-radius: 0.5rem;
+              color: #f9f9f9;
+            }
+
+            /* Style the icon when parent has :focus state */
+            .adjacent-sibling-textbox-input:focus
+              + .adjacent-sibling-textbox-icon {
+              color: #44fdf2;
+            }
+          </style>
+        </article>
+        <article class="block general-siblings">
+          <div class="block-inner">
+            <h2 class="block-title">
+              General Siblings
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <span class="general-siblings-textbox">
+                  <input
+                    value="Joseph"
+                    placeholder="Username"
+                    class="general-siblings-textbox-input"
+                  />
+                  <label class="general-siblings-textbox-label">
+                    Username
+                  </label>
+                  <span
+                    class="general-siblings-textbox-icon uil uil-user"
+                  ></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.general-siblings {
+              background: #222227;
+            }
+
+            .general-siblings-textbox {
+              position: relative;
+              display: flex;
+              align-items: center;
+              padding: 1rem 1rem 0.25rem;
+              background: #121315;
+            }
+
+            .general-siblings-textbox-label {
+              position: absolute;
+              top: 0.875rem;
+              left: 1rem;
+              font-size: 0.75rem;
+              color: #757575;
+            }
+
+            .general-siblings-textbox-icon {
+              font-size: 1.5rem;
+              color: #757575;
+            }
+
+            .general-siblings-textbox-input {
+              width: 10rem;
+              height: 3.75rem;
+              border-radius: 0.5rem;
+              color: #f9f9f9;
+            }
+
+            /* Target any elements after and at the same level */
+            .general-siblings-textbox-input:focus
+              ~ .general-siblings-textbox-icon {
+              color: #44fdf2;
+            }
+
+            /* Target any elements after and at the same level */
+            .general-siblings-textbox-input:focus
+              ~ .general-siblings-textbox-label {
+              color: #44fdf2;
+            }
+          </style>
+        </article>
+        <article class="block stacked">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Stacked
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <span class="stacked-textbox">
+                  <input
+                    type="password"
+                    value="Password1"
+                    placeholder="Enter password"
+                    class="stacked-textbox-input"
+                  />
+                  <label class="stacked-textbox-label">
+                    Password
+                  </label>
+                  <span class="stacked-textbox-icon uil uil-padlock"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.stacked {
+              background: #222227;
+            }
+
+            .stacked-textbox {
+              position: relative;
+              display: flex;
+              align-items: center;
+              padding: 1rem 1rem 0.25rem;
+              background: #121315;
+            }
+
+            .stacked-textbox-label {
+              position: absolute;
+              top: 0.875rem;
+              left: 1rem;
+              font-size: 0.75rem;
+              color: #757575;
+            }
+
+            .stacked-textbox-icon {
+              font-size: 1.5rem;
+              color: #757575;
+            }
+
+            .stacked-textbox-input {
+              width: 10rem;
+              height: 3.75rem;
+              border-radius: 0.5rem;
+              color: #f9f9f9;
+            }
+
+            /* Use stacking to clean the previous example up */
+            .stacked-textbox-input:focus ~ .stacked-textbox-icon,
+            .stacked-textbox-input:focus ~ .stacked-textbox-label {
+              color: #fd449f;
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

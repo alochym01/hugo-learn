@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Instagram Content</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        Instagram Content
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block jelly-checkbox">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Jelly checkbox
+            </h2>
+            <div class="block-component">
+              <input id="checkbox" type="checkbox" class="jelly-input" />
+              <label for="checkbox" class="jelly-label"> </label>
+            </div>
+          </div>
+          <style>
+            .block.jelly-checkbox {
+              background: #1d1e22;
+            }
+
+            .jelly-label {
+              position: relative;
+              width: 50px;
+              height: 50px;
+              border: 3px solid #36383e;
+              border-radius: 6px;
+              cursor: pointer;
+              transition: background 0.1s ease;
+            }
+
+            .jelly-label::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 10px;
+              height: 20px;
+              margin-left: -5px;
+              margin-top: -13px;
+              opacity: 0;
+              transform: rotate(45deg) scale(0);
+              border-right: 3px solid #1d1e22;
+              border-bottom: 3px solid #1d1e22;
+              transition: all 0.3s ease;
+              transition-delay: 0.15s;
+            }
+
+            .jelly-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .jelly-input:checked ~ .jelly-label {
+              border-color: transparent;
+              background: #1ac0a2;
+              animation: jelly 0.6s ease;
+            }
+
+            .jelly-input:checked ~ .jelly-label:after {
+              opacity: 1;
+              transform: rotate(45deg) scale(1);
+            }
+
+            @keyframes jelly {
+              0%,
+              100% {
+                transform: scale(1, 1);
+              }
+              30% {
+                transform: scale(1.1, 0.9);
+              }
+              40% {
+                transform: scale(0.8, 1.2);
+              }
+              50% {
+                transform: scale(1.1, 0.8);
+              }
+              65% {
+                transform: scale(0.9, 1);
+              }
+              75% {
+                transform: scale(1, 0.9);
+              }
+            }
+          </style>
+        </article>
+        <article class="block heart-icon">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Heart icon
+            </h2>
+            <div class="block-component">
+              <div class="heart"></div>
+            </div>
+          </div>
+          <style>
+            .block.heart-icon {
+              background: #222227;
+            }
+
+            .heart {
+              position: relative;
+              transform: rotate(45deg);
+              width: 70px;
+              height: 50px;
+              border-radius: 25px 0 0 25px;
+              border: 5px solid #8f44fd;
+            }
+
+            .heart::after {
+              content: "";
+              position: absolute;
+              top: -25px;
+              left: 15px;
+              height: 20px;
+              width: 40px;
+              border-radius: 25px 25px 0 0;
+              border: inherit;
+              border-bottom: transparent;
+            }
+
+            .heart,
+            .heart::after {
+              background: #222227;
+              transition: all 0.35s;
+            }
+
+            .heart:hover,
+            .heart:hover::after {
+              background: #8f44fd;
+            }
+          </style>
+        </article>
+        <article class="block footer-navigation-1">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Footer navigation
+            </h2>
+            <div class="block-component">
+              <nav class="footer-navigation-1-nav">
+                <label class="footer-navigation-1-label home">
+                  <input checked type="radio" name="nav" />
+                  <span class="footer-navigation-1-button">
+                    <span class="icon home uil uil-estate"></span>
+                    <span class="text">HOME</span>
+                  </span>
+                </label>
+                <label class="footer-navigation-1-label find">
+                  <input type="radio" name="nav" />
+                  <span class="footer-navigation-1-button">
+                    <span class="icon find uil uil-search"></span>
+                    <span class="text">FIND</span>
+                  </span>
+                </label>
+                <label class="footer-navigation-1-label like">
+                  <input type="radio" name="nav" />
+                  <span class="footer-navigation-1-button">
+                    <span class="icon like uil uil-heart"></span>
+                    <span class="text">LIKE</span>
+                  </span>
+                </label>
+              </nav>
+            </div>
+          </div>
+          <style>
+            .block.footer-navigation-1 {
+              background: #222227;
+            }
+
+            .footer-navigation-1-nav {
+              position: relative;
+              display: flex;
+              align-items: center;
+              width: 18rem;
+              height: 5rem;
+              border-radius: 0 0 12px 12px;
+              background: #191a1e;
+            }
+
+            .footer-navigation-1 input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .footer-navigation-1 label {
+              display: grid;
+              place-items: center;
+              flex: 1 1 auto;
+            }
+
+            .footer-navigation-1-button {
+              position: relative;
+              padding: 2rem 0.5rem 0.5rem;
+              cursor: pointer;
+              color: #f9f9f9;
+              font-size: 1.75rem;
+            }
+
+            .footer-navigation-1 .icon {
+              position: absolute;
+              top: 0;
+              left: 50%;
+              transform: translate(-50%, 0);
+              transition: all 0.375s;
+            }
+
+            .footer-navigation-1 .text {
+              position: absolute;
+              z-index: 1;
+              left: 50%;
+              bottom: -4px;
+              transform: translateX(-50%);
+              font-size: 12px;
+              font-weight: 600;
+              letter-spacing: 1px;
+              visibility: hidden;
+              opacity: 0;
+              transition: all 0.375s;
+            }
+
+            .footer-navigation-1-nav
+              input:checked
+              ~ .footer-navigation-1-button {
+              color: #57baf5;
+            }
+
+            .footer-navigation-1-nav
+              input:checked
+              ~ .footer-navigation-1-button
+              .text {
+              visibility: visible;
+              opacity: 1;
+            }
+
+            .footer-navigation-1
+              input:checked
+              ~ .footer-navigation-1-button
+              .icon {
+              transform: translate(-50%, -9px);
+            }
+          </style>
+        </article>
+        <article class="block footer-navigation-2">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Footer navigation
+            </h2>
+            <div class="block-component">
+              <nav class="footer-navigation-2-nav">
+                <input
+                  class="footer-navigation-2-input"
+                  checked
+                  id="home"
+                  type="radio"
+                  name="nav2"
+                />
+                <input
+                  class="footer-navigation-2-input"
+                  id="find"
+                  type="radio"
+                  name="nav2"
+                />
+                <input
+                  class="footer-navigation-2-input"
+                  id="like"
+                  type="radio"
+                  name="nav2"
+                />
+                <div class="indicator"></div>
+                <label class="footer-navigation-2-label home" for="home">
+                  <span
+                    class="footer-navigation-2-icon home uil uil-estate"
+                  ></span>
+                  <span class="footer-navigation-2-text">HOME</span>
+                </label>
+                <label class="footer-navigation-2-label find" for="find">
+                  <span
+                    class="footer-navigation-2-icon find uil uil-search"
+                  ></span>
+                  <span class="footer-navigation-2-text">FIND</span>
+                </label>
+                <label class="footer-navigation-2-label like" for="like">
+                  <span
+                    class="footer-navigation-2-icon like uil uil-heart"
+                  ></span>
+                  <span class="footer-navigation-2-text">LIKE</span>
+                </label>
+              </nav>
+            </div>
+          </div>
+          <style>
+            .block.footer-navigation-2 {
+              background: #222227;
+            }
+
+            .footer-navigation-2-nav {
+              position: relative;
+              display: flex;
+              width: 240px;
+              height: 70px;
+              border-radius: 0 0 12px 12px;
+              background: #191a1e;
+            }
+
+            .footer-navigation-2-nav .indicator {
+              position: absolute;
+              bottom: 23px;
+              left: 40px;
+              margin-left: -2px;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: #45c2f8;
+              transition: all 0.5s;
+            }
+
+            .footer-navigation-2-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .footer-navigation-2-label {
+              position: relative;
+              display: grid;
+              place-items: center;
+              flex: 1 1 auto;
+              cursor: pointer;
+            }
+
+            .footer-navigation-2-icon,
+            .footer-navigation-2-text {
+              color: #ccc;
+              transition: all 0.15s;
+            }
+
+            .footer-navigation-2-icon {
+              font-size: 22px;
+            }
+
+            .footer-navigation-2-text {
+              position: absolute;
+              bottom: 30px;
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: 2px;
+            }
+
+            .footer-navigation-2-input:nth-child(1):checked
+              ~ .footer-navigation-2-label.home
+              .footer-navigation-2-icon,
+            .footer-navigation-2-input:nth-child(2):checked
+              ~ .footer-navigation-2-label.find
+              .footer-navigation-2-icon,
+            .footer-navigation-2-input:nth-child(3):checked
+              ~ .footer-navigation-2-label.like
+              .footer-navigation-2-icon {
+              opacity: 0;
+            }
+
+            .footer-navigation-2-input:nth-child(1):checked
+              ~ .footer-navigation-2-label.home
+              .footer-navigation-2-text,
+            .footer-navigation-2-input:nth-child(2):checked
+              ~ .footer-navigation-2-label.find
+              .footer-navigation-2-text,
+            .footer-navigation-2-input:nth-child(3):checked
+              ~ .footer-navigation-2-label.like
+              .footer-navigation-2-text {
+              opacity: 1;
+              color: #45c2f8;
+            }
+
+            .footer-navigation-2-input:nth-child(1):checked ~ .indicator {
+              transform: translateX(0);
+            }
+
+            .footer-navigation-2-input:nth-child(2):checked ~ .indicator {
+              transform: translateX(80px);
+            }
+
+            .footer-navigation-2-input:nth-child(3):checked ~ .indicator {
+              transform: translateX(160px);
+            }
+          </style>
+        </article>
+        <article class="block rotating-badges">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Rotating badges
+            </h2>
+            <div class="block-component">
+              <div class="rotating-badge-wrapper">
+                <span class="badge">
+                  <span class="front">
+                    <span class="uil uil-tag"></span>
+                  </span>
+                  <span class="back">
+                    11k
+                  </span>
+                </span>
+                <span class="badge">
+                  <span class="front">
+                    <span class="uil uil-heart"></span>
+                  </span>
+                  <span class="back">
+                    33k
+                  </span>
+                </span>
+                <span class="badge">
+                  <span class="front">
+                    <span class="uil uil-comment"></span>
+                  </span>
+                  <span class="back">
+                    88k
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.rotating-badges {
+              background: #222227;
+            }
+
+            .rotating-badge-wrapper {
+              display: flex;
+              gap: 1rem;
+            }
+
+            .badge {
+              position: relative;
+              perspective: 24rem;
+              user-select: none;
+            }
+
+            .front {
+              color: #da4877;
+            }
+
+            .front,
+            .back {
+              display: grid;
+              place-items: center;
+              width: 3.5rem;
+              height: 3.5rem;
+              border-radius: 50%;
+              background: #303135;
+              backface-visibility: hidden;
+              transition: transform 0.7s;
+            }
+
+            .back {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              transform: rotateY(180deg);
+              color: #f9f9f9;
+            }
+
+            .badge .uil {
+              font-size: 1.5rem;
+            }
+
+            .badge:hover .front {
+              transform: rotateY(180deg);
+            }
+
+            .badge:hover .back {
+              transform: rotateY(360deg);
+            }
+          </style>
+        </article>
+        <article class="block material-checkbox">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Material checkbox
+            </h2>
+            <div class="block-component">
+              <label class="material-checkbox-label">
+                <input type="checkbox" checked />
+                <span class="checkbox"></span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.material-checkbox {
+              background: #222227;
+            }
+
+            .material-checkbox-label {
+              cursor: pointer;
+            }
+
+            .material-checkbox-label input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .material-checkbox-label .checkbox {
+              display: block;
+              width: 70px;
+              height: 70px;
+              border: 4px solid #e7e7e7;
+              transition: all 0.35s;
+            }
+
+            .material-checkbox-label input:checked ~ .checkbox {
+              transform: rotate(45deg);
+              width: 25px;
+              border-color: #8f44fd;
+              border-top-color: transparent;
+              border-left-color: transparent;
+            }
+          </style>
+        </article>
+        <article class="block triangle">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Triangle
+            </h2>
+            <div class="block-component">
+              <div class="triangle-div"></div>
+            </div>
+          </div>
+          <style>
+            .block.triangle {
+              background: #8f44fd;
+            }
+
+            .triangle-div {
+              width: 0;
+              height: 0;
+              border-left: 50px solid transparent;
+              border-right: 50px solid transparent;
+              border-bottom: 80px solid white;
+            }
+          </style>
+        </article>
+        <article class="block hexagon">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Hexagon
+            </h2>
+            <div class="block-component">
+              <div class="hexagon-div"></div>
+            </div>
+          </div>
+          <style>
+            .block.hexagon {
+              background: #222227;
+            }
+
+            .hexagon-div {
+              width: 100px;
+              height: 57.735px;
+              background: #549ef8;
+              position: relative;
+            }
+
+            .hexagon-div::before,
+            .hexagon-div::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              width: 0;
+              height: 0;
+              border-left: 50px solid transparent;
+              border-right: 50px solid transparent;
+            }
+
+            .hexagon-div::before {
+              top: -28.8675px;
+              border-bottom: 28.8675px solid #549ef8;
+            }
+
+            .hexagon-div::after {
+              bottom: -28.8675px;
+              border-top: 28.8675px solid #549ef8;
+            }
+          </style>
+        </article>
+        <article class="block cut-diamond">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Cut-diamond
+            </h2>
+            <div class="block-component">
+              <div class="cut-diamond-div"></div>
+            </div>
+          </div>
+          <style>
+            .block.cut-diamond {
+              background: #8f44fd;
+            }
+
+            .cut-diamond-div {
+              box-sizing: content-box;
+              position: relative;
+              width: 50px;
+              height: 0;
+              margin-bottom: 50px;
+              border-style: solid;
+              border-color: transparent transparent white transparent;
+              border-width: 0 25px 25px 25px;
+            }
+
+            .cut-diamond-div::after {
+              content: "";
+              position: absolute;
+              top: 25px;
+              left: -25px;
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-color: white transparent transparent transparent;
+              border-width: 70px 50px 0 50px;
+            }
+          </style>
+        </article>
+        <article class="block square-switch">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Square switch
+            </h2>
+            <div class="block-component">
+              <label class="square-switch-label">
+                <input class="square-switch-input" type="checkbox" />
+                <span class="square-switch-wrapper">
+                  <span class="square-switch-handle"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.square-switch {
+              background: #222227;
+            }
+
+            .square-switch-label {
+              cursor: pointer;
+            }
+
+            .square-switch-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .square-switch-input:checked ~ .square-switch-wrapper {
+              background: #21af8c;
+            }
+
+            .square-switch-input:checked
+              ~ .square-switch-wrapper
+              .square-switch-handle {
+              transform: translateX(36px);
+            }
+
+            .square-switch-wrapper {
+              display: block;
+              width: 76px;
+              padding: 4px;
+              background: #484a55;
+              transition: all 0.375s;
+            }
+
+            .square-switch-handle {
+              display: block;
+              width: 32px;
+              height: 32px;
+              background: #222227;
+              transition: all 0.375s;
+            }
+          </style>
+        </article>
+        <article class="block round-switch">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Round switch
+            </h2>
+            <div class="block-component">
+              <label class="round-switch-label">
+                <input class="round-switch-input" type="checkbox" />
+                <span class="round-switch-wrapper">
+                  <span class="round-switch-handle"></span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.round-switch {
+              background: #222227;
+            }
+
+            .round-switch-label {
+              cursor: pointer;
+            }
+
+            .round-switch-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .round-switch-input:checked ~ .round-switch-wrapper {
+              background: #21af8c;
+            }
+
+            .round-switch-input:checked
+              ~ .round-switch-wrapper
+              .round-switch-handle {
+              transform: translateX(36px);
+            }
+
+            .round-switch-wrapper {
+              display: block;
+              width: 76px;
+              padding: 4px;
+              border-radius: 20px;
+              background: #484a55;
+              transition: all 0.375s;
+            }
+
+            .round-switch-handle {
+              display: block;
+              width: 32px;
+              height: 32px;
+              border-radius: 16px;
+              background: #222227;
+              transition: all 0.375s;
+            }
+          </style>
+        </article>
+        <article class="block modern-dropdown">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Modern dropdown
+            </h2>
+            <div class="block-component">
+              <label class="modern-dropdown-wrapper">
+                <input type="checkbox" class="modern-dropdown-input" />
+                <header class="modern-dropdown-button">
+                  <span class="modern-dropdown-button-text">
+                    Select Country
+                  </span>
+                  <span
+                    class="modern-dropdown-button-icon uil uil-angle-down"
+                  ></span>
+                </header>
+
+                <span class="modern-dropdown-menu">
+                  <button class="modern-dropdown-menu-button">
+                    <img
+                      class="modern-dropdown-flag"
+                      src="https://flagcdn.com/w320/jm.png"
+                    />
+                    <span class="modern-dropdown-flag-label">Jamaica</span>
+                  </button>
+                  <button class="modern-dropdown-menu-button">
+                    <img
+                      class="modern-dropdown-flag"
+                      src="https://flagcdn.com/w320/tt.png"
+                    />
+                    <span class="modern-dropdown-flag-label"
+                      >Trinidad & Tobago</span
+                    >
+                  </button>
+                  <button class="modern-dropdown-menu-button">
+                    <img
+                      class="modern-dropdown-flag"
+                      src="https://flagcdn.com/w320/bs.png"
+                    />
+                    <span class="modern-dropdown-flag-label">The Bahamas</span>
+                  </button>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.modern-dropdown {
+              background: #8f44fd;
+            }
+
+            .modern-dropdown-wrapper {
+              position: relative;
+            }
+
+            .modern-dropdown-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .modern-dropdown-menu,
+            .modern-dropdown-button {
+              border-radius: 0.5rem;
+            }
+
+            .modern-dropdown-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 16rem;
+              height: 4rem;
+              padding: 1rem 1rem 1rem 1.75rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #2c2d33;
+              cursor: pointer;
+            }
+
+            .modern-dropdown-button-icon {
+              font-size: 1.875rem;
+              transition: transform 0.35s;
+            }
+
+            .modern-dropdown-button-text {
+              font-size: 1rem;
+            }
+
+            .modern-dropdown-menu {
+              position: absolute;
+              z-index: 1;
+              top: 4.5rem;
+              left: 0;
+              display: block;
+              width: 100%;
+              padding: 1rem 0;
+              background: #2c2d33;
+              opacity: 0;
+              visibility: hidden;
+              transform: scaleY(0);
+              transform-origin: 0% 0%;
+              transition-property: transform, opacity, visibility;
+              transition-duration: 0.35s;
+            }
+
+            .modern-dropdown-input:checked ~ .modern-dropdown-menu {
+              visibility: visible;
+              opacity: 1;
+              transform: scaleY(1);
+            }
+
+            .modern-dropdown-input:checked
+              ~ .modern-dropdown-button
+              .modern-dropdown-button-icon {
+              transform: rotate(-180deg);
+            }
+
+            .modern-dropdown-menu-button {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              height: 3rem;
+              padding: 0 1rem;
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+              cursor: pointer;
+            }
+
+            .modern-dropdown-flag {
+              width: 2rem;
+            }
+          </style>
+        </article>
+        <article class="block realistic-dropdown">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Realistic dropdown
+            </h2>
+            <div class="block-component">
+              <label class="realistic-dropdown-wrapper">
+                <input type="checkbox" class="realistic-dropdown-input" />
+                <header class="realistic-dropdown-button">
+                  <span class="realistic-dropdown-button-text">
+                    Select Country
+                  </span>
+                  <span
+                    class="realistic-dropdown-button-icon uil uil-angle-down"
+                  ></span>
+                </header>
+
+                <span class="realistic-dropdown-menu">
+                  <button class="realistic-dropdown-menu-button">
+                    <img
+                      class="realistic-dropdown-flag"
+                      src="https://flagcdn.com/w320/jm.png"
+                    />
+                    <span class="realistic-dropdown-flag-label">Jamaica</span>
+                  </button>
+                  <button class="realistic-dropdown-menu-button">
+                    <img
+                      class="realistic-dropdown-flag"
+                      src="https://flagcdn.com/w320/tt.png"
+                    />
+                    <span class="realistic-dropdown-flag-label"
+                      >Trinidad & Tobago</span
+                    >
+                  </button>
+                  <button class="realistic-dropdown-menu-button">
+                    <img
+                      class="realistic-dropdown-flag"
+                      src="https://flagcdn.com/w320/bs.png"
+                    />
+                    <span class="realistic-dropdown-flag-label"
+                      >The Bahamas</span
+                    >
+                  </button>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.realistic-dropdown {
+              background: #222227;
+            }
+
+            .realistic-dropdown-wrapper {
+              position: relative;
+            }
+
+            .realistic-dropdown-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .realistic-dropdown-menu,
+            .realistic-dropdown-button {
+              border-radius: 0.5rem;
+            }
+
+            .realistic-dropdown-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 16rem;
+              height: 4rem;
+              padding: 1rem 1rem 1rem 1.75rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #18181c;
+              cursor: pointer;
+            }
+
+            .realistic-dropdown-button-icon {
+              font-size: 1.875rem;
+              transition: transform 0.35s;
+            }
+
+            .realistic-dropdown-button-text {
+              font-size: 1rem;
+            }
+
+            .realistic-dropdown-menu {
+              position: absolute;
+              z-index: 1;
+              top: 4.5rem;
+              left: 0;
+              display: block;
+              width: 100%;
+              padding: 1rem 0;
+              background: #18181c;
+              opacity: 0;
+              visibility: hidden;
+              transform: translate(-1.5rem, -2.5rem) scale(0);
+              transform-origin: 100% 0%;
+              transition-property: transform, opacity, visibility;
+              transition-duration: 0.35s;
+            }
+
+            .realistic-dropdown-input:checked ~ .realistic-dropdown-menu {
+              visibility: visible;
+              opacity: 1;
+              transform: translate(0) scale(1);
+            }
+
+            .realistic-dropdown-input:checked
+              ~ .realistic-dropdown-button
+              .realistic-dropdown-button-icon {
+              transform: rotate(-180deg);
+            }
+
+            .realistic-dropdown-menu-button {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              height: 3rem;
+              padding: 0 1rem;
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+              cursor: pointer;
+            }
+
+            .realistic-dropdown-flag {
+              width: 2rem;
+            }
+          </style>
+        </article>
+        <article class="block futuristic-dropdown">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Futuristic dropdown
+            </h2>
+            <div class="block-component">
+              <label class="futuristic-dropdown-wrapper">
+                <input type="checkbox" class="futuristic-dropdown-input" />
+                <header class="futuristic-dropdown-button">
+                  <span class="futuristic-dropdown-button-text">
+                    Select Country
+                  </span>
+                  <span
+                    class="futuristic-dropdown-button-icon uil uil-angle-down"
+                  ></span>
+                </header>
+
+                <span class="futuristic-dropdown-menu">
+                  <button class="futuristic-dropdown-menu-button">
+                    <img
+                      class="futuristic-dropdown-flag"
+                      src="https://flagcdn.com/w320/jm.png"
+                    />
+                    <span class="futuristic-dropdown-flag-label">Jamaica</span>
+                  </button>
+                  <button class="futuristic-dropdown-menu-button">
+                    <img
+                      class="futuristic-dropdown-flag"
+                      src="https://flagcdn.com/w320/tt.png"
+                    />
+                    <span class="futuristic-dropdown-flag-label"
+                      >Trinidad & Tobago</span
+                    >
+                  </button>
+                  <button class="futuristic-dropdown-menu-button">
+                    <img
+                      class="futuristic-dropdown-flag"
+                      src="https://flagcdn.com/w320/bs.png"
+                    />
+                    <span class="futuristic-dropdown-flag-label"
+                      >The Bahamas</span
+                    >
+                  </button>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.futuristic-dropdown {
+              background: #373942;
+            }
+
+            .futuristic-dropdown-wrapper {
+              position: relative;
+              perspective: 1000px;
+            }
+
+            .futuristic-dropdown-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .futuristic-dropdown-menu,
+            .futuristic-dropdown-button {
+              border-radius: 0.5rem;
+            }
+
+            .futuristic-dropdown-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: space-between;
+              width: 16rem;
+              height: 4rem;
+              padding: 1rem 1rem 1rem 1.75rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #23252b;
+              cursor: pointer;
+            }
+
+            .futuristic-dropdown-button-icon {
+              font-size: 1.875rem;
+              transition: transform 0.35s;
+            }
+
+            .futuristic-dropdown-button-text {
+              font-size: 1rem;
+            }
+
+            .futuristic-dropdown-menu {
+              position: absolute;
+              z-index: 1;
+              top: 4.5rem;
+              left: 0;
+              transform: rotate3d(1, 0, 0, -90deg);
+              transform-origin: 0% 0%;
+              display: block;
+              width: 100%;
+              padding: 1rem 0;
+              background: #23252b;
+              opacity: 0;
+              visibility: hidden;
+              backface-visibility: hidden;
+              transition-property: transform, opacity, visibility;
+              transition-duration: 0.35s;
+            }
+
+            .futuristic-dropdown-input:checked ~ .futuristic-dropdown-menu {
+              visibility: visible;
+              opacity: 1;
+              transform: translate(0) scale(1);
+            }
+
+            .futuristic-dropdown-input:checked
+              ~ .futuristic-dropdown-button
+              .futuristic-dropdown-button-icon {
+              transform: rotate(-180deg);
+            }
+
+            .futuristic-dropdown-menu-button {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              height: 3rem;
+              padding: 0 1rem;
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+              cursor: pointer;
+            }
+
+            .futuristic-dropdown-flag {
+              width: 2rem;
+            }
+          </style>
+        </article>
+        <article class="block ant-design-textbox">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Ant design textbox
+            </h2>
+            <div class="block-component">
+              <div class="ad-wrapper">
+                <input class="ad-input" spellcheck="false" />
+                <div class="ad-underline"></div>
+                <label class="ad-label">Search</label>
+                <span class="ad-icon uil uil-search"></span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.ant-design-textbox {
+              background: #18181b;
+            }
+
+            .ad-wrapper {
+              position: relative;
+              display: flex;
+              height: 4rem;
+            }
+
+            .ad-label {
+              position: absolute;
+              z-index: 1;
+              top: 50%;
+              left: 0;
+              transform: translate(2rem, -50%);
+              transform-origin: 0% 0%;
+              color: #888888;
+              padding: 0.25rem 0;
+              pointer-events: none;
+              transition: all 0.375s;
+            }
+
+            .ad-icon {
+              position: absolute;
+              z-index: 1;
+              top: 50%;
+              left: 0;
+              font-size: 1.675rem;
+              transform: translateY(-50%);
+              color: #888888;
+              pointer-events: none;
+              font-size: 1.25rem;
+              transition: all 0.375s;
+            }
+
+            .ad-underline {
+              content: "";
+              display: block;
+              position: absolute;
+              z-index: 1;
+              left: 0;
+              bottom: 0;
+              transform: scaleX(0);
+              width: 100%;
+              height: 2px;
+              background: #0fa5a2;
+              transition: all 0.375s;
+            }
+
+            .ad-input {
+              width: 16rem;
+              height: inherit;
+              padding-left: 2rem;
+              border: 0;
+              border-bottom: 2px solid #323235;
+              outline: none;
+              background: transparent;
+              color: #f7f7f7;
+              font-size: 1rem;
+              transition: all 0.375s;
+            }
+
+            .ad-input:focus ~ .ad-icon {
+              color: #ffffff;
+            }
+
+            .ad-input:focus ~ .ad-label {
+              transform: translate(0, -2.875rem) scale(0.875);
+              color: #0fa5a2;
+            }
+
+            .ad-input:focus ~ .ad-underline {
+              transform: scaleX(1);
+            }
+          </style>
+        </article>
+        <article class="block material-design-textbox">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Material design textbox
+            </h2>
+            <div class="block-component">
+              <div class="md-wrapper">
+                <input class="md-input" spellcheck="false" />
+                <label class="md-label">
+                  First Names
+                </label>
+                <span class="md-icon material-icons">
+                  account_circle
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.material-design-textbox {
+              background: #18181b;
+            }
+
+            .md-wrapper {
+              position: relative;
+              display: flex;
+              height: 4rem;
+            }
+
+            .md-label {
+              position: absolute;
+              top: 50%;
+              left: 0.65rem;
+              transform: translateY(-50%);
+              transform-origin: 0% 0%;
+              padding: 0.25rem 0.5rem;
+              color: #888888;
+              pointer-events: none;
+              transition: all 0.375s;
+            }
+
+            .md-icon {
+              position: absolute;
+              top: 50%;
+              right: 1rem;
+              transform: translateY(-50%);
+              font-size: 1.675rem;
+              color: #888888;
+              transition: all 0.375s;
+            }
+
+            .md-input {
+              height: inherit;
+              width: 16rem;
+              padding: 0 3rem 0 1rem;
+              border: 1px solid #888888;
+              border-radius: 0.5rem;
+              outline: none;
+              background: transparent;
+              color: #f9f9f9;
+              font-size: 1rem;
+              transition: all 0.375s;
+            }
+
+            .md-input:focus {
+              border-color: #8f44fd;
+            }
+
+            .md-input:focus ~ .md-icon {
+              color: #f9f9f9;
+            }
+
+            .md-input:focus ~ .md-label {
+              transform: translateY(-2.875rem) scale(0.875);
+              background: #18181b;
+              color: rgba(255, 255, 255, 0.57);
+            }
+          </style>
+        </article>
+        <article class="block bubbly-textbox">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Bubbly textbox
+            </h2>
+            <div class="block-component">
+              <div class="bub-wrapper">
+                <input class="bub-input" spellcheck="false" />
+                <label class="bub-label">
+                  Email
+                </label>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.bubbly-textbox {
+              background: #18181b;
+            }
+
+            .bub-wrapper {
+              position: relative;
+              display: flex;
+              height: 3.5rem;
+              border-radius: 2rem;
+              background: #2d2d32;
+            }
+
+            .bub-label {
+              position: absolute;
+              top: 0.5rem;
+              left: 0.5rem;
+              display: grid;
+              place-items: center;
+              height: 2.5rem;
+              width: 5rem;
+              border-radius: inherit;
+              background: #07bf96;
+              color: #ffffff;
+              font-size: 0.875rem;
+              pointer-events: none;
+              transition: all 0.375s;
+            }
+
+            .bub-input {
+              flex: 1 1 auto;
+              width: 100%;
+              height: inherit;
+              padding-left: 6.25rem;
+              border: 0;
+              outline: none;
+              background: transparent;
+              color: #f9f9f9;
+              font-size: 1rem;
+              transition: all 0.375s;
+            }
+
+            .bub-input::placeholder {
+              color: #9b9ba5;
+            }
+
+            .bub-input:focus {
+              transform: translateX(-4.5rem);
+              width: calc(100% + 4.5rem);
+            }
+
+            .bub-input:focus ~ .bub-label {
+              transform: translateY(-3.5rem);
+            }
+          </style>
+        </article>
+        <article class="block split-button">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Split button
+            </h2>
+            <div class="block-component">
+              <label class="split-button-wrapper">
+                <input class="split-button-input" type="checkbox" />
+                <span class="split-button-content">
+                  <span class="split-button-lg">
+                    Move Money
+                  </span>
+                  <span class="split-button-sm uil uil-angle-down"> </span>
+                </span>
+                <span class="split-button-menu">
+                  <span class="split-button-menu-button">
+                    Action
+                  </span>
+                  <span class="split-button-menu-button">
+                    Another action
+                  </span>
+                  <span class="split-button-menu-button">
+                    Something else here
+                  </span>
+                  <span class="split-button-menu-button has-border-top">
+                    Separated link
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.split-button {
+              background: #222227;
+            }
+
+            .split-button-wrapper {
+              position: relative;
+              display: flex;
+              align-items: center;
+              height: 4rem;
+              border-radius: 0.325rem;
+              background: #78724f;
+              color: #f9f9f9;
+              cursor: pointer;
+            }
+
+            .split-button-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .split-button-menu {
+              overflow: hidden;
+              position: absolute;
+              z-index: 1;
+              top: 4.5rem;
+              left: 0;
+              transform: rotate(-10deg) translateX(-2.5rem);
+              transform-origin: 100% 100%;
+              display: grid;
+              width: 100%;
+              border-radius: 0.325rem;
+              background: #f9f9f9;
+              visibility: hidden;
+              opacity: 0;
+              transition: all 0.375s;
+            }
+
+            .split-button-content {
+              display: flex;
+              align-items: center;
+            }
+
+            .split-button-lg {
+              padding: 0 2rem;
+            }
+
+            .split-button-sm {
+              display: grid;
+              place-items: center;
+              width: 4rem;
+              height: 4rem;
+              background: rgba(0, 0, 0, 0.12);
+              font-size: 1.5rem;
+            }
+
+            .split-button-input:checked ~ .split-button-menu {
+              visibility: visible;
+              opacity: 1;
+              transform: rotate(0) translateX(0);
+            }
+
+            .split-button-menu-button {
+              display: grid;
+              align-items: center;
+              height: 3rem;
+              padding: 0 2rem;
+              color: #1a1a1a;
+              font-size: 0.875rem;
+            }
+
+            .split-button-menu-button:hover {
+              background: #ebebeb;
+            }
+
+            .split-button-menu-button.has-border-top {
+              border-top: 1px solid #e7e7e7;
+            }
+          </style>
+        </article>
+        <article class="block split-button-2">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Split button 2
+            </h2>
+            <div class="block-component">
+              <label class="split-button-2-wrapper">
+                <input class="split-button-2-input" type="checkbox" />
+                <span class="split-button-2-content">
+                  <span class="split-button-2-lg">
+                    Book Your Trip
+                  </span>
+                  <span class="split-button-2-sm uil uil-angle-down"> </span>
+                </span>
+                <span class="split-button-2-menu">
+                  <span class="split-button-2-menu-button">
+                    Action
+                  </span>
+                  <span class="split-button-2-menu-button">
+                    Another action
+                  </span>
+                  <span class="split-button-2-menu-button">
+                    Something else here
+                  </span>
+                  <span class="split-button-2-menu-button has-border-top">
+                    Separated link
+                  </span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <style>
+            .block.split-button-2 {
+              background: #222227;
+            }
+
+            .split-button-2-wrapper {
+              position: relative;
+              perspective: 1000px;
+              display: flex;
+              align-items: center;
+              height: 4rem;
+              border-radius: 0.325rem;
+              background: #1eae96;
+              color: #f9f9f9;
+              cursor: pointer;
+            }
+
+            .split-button-2-input {
+              position: absolute;
+              transform: scale(0);
+            }
+
+            .split-button-2-menu {
+              overflow: hidden;
+              position: absolute;
+              z-index: 1;
+              top: 4.5rem;
+              left: 0;
+              transform: scale(0.75) rotateX(180deg);
+              transform-origin: 50% 50%;
+              display: grid;
+              width: 100%;
+              border-radius: 0.325rem;
+              background: #f9f9f9;
+              visibility: hidden;
+              opacity: 0;
+              transition: all 0.375s;
+            }
+
+            .split-button-2-content {
+              display: flex;
+              align-items: center;
+            }
+
+            .split-button-2-lg {
+              padding: 0 2rem;
+            }
+
+            .split-button-2-sm {
+              display: grid;
+              place-items: center;
+              width: 4rem;
+              height: 4rem;
+              background: rgba(0, 0, 0, 0.08);
+              font-size: 1.5rem;
+            }
+
+            .split-button-2-input:checked ~ .split-button-2-menu {
+              transform: scale(1) rotateX(0);
+              visibility: visible;
+              opacity: 1;
+            }
+
+            .split-button-2-menu-button {
+              display: grid;
+              align-items: center;
+              height: 3rem;
+              padding: 0 2rem;
+              color: #1a1a1a;
+              font-size: 0.875rem;
+            }
+
+            .split-button-2-menu-button:hover {
+              background: #ebebeb;
+            }
+
+            .split-button-2-menu-button.has-border-top {
+              border-top: 1px solid #e7e7e7;
+            }
+          </style>
+        </article>
+        <article class="block emoji-slider">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Emoji slider
+            </h2>
+            <div class="block-component">
+              <input class="emoji-slider-input" type="range" />
+            </div>
+          </div>
+          <style>
+            .block.emoji-slider {
+              background: #222227;
+            }
+
+            .emoji-slider-input {
+              appearance: none;
+              width: 16rem;
+              height: 0.5rem;
+              border-radius: 0.25rem;
+              background: #2b2d32;
+            }
+
+            .emoji-slider-input::-webkit-slider-thumb {
+              appearance: none;
+              width: 4rem;
+              height: 4rem;
+              background: url("../assets/img/fire-emoji.png");
+              background-size: 70%;
+              background-position: 50% 0;
+              background-repeat: no-repeat;
+              cursor: grab;
+              transition: all 0.375s;
+            }
+
+            .emoji-slider-input::-webkit-slider-thumb:hover {
+              transform: scale(1.2);
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

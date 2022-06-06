@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pseudo Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        Pseudo Classes
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block hover">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :hover
+            </h2>
+            <div class="block-component">
+              <button class="hover-button">
+                <span class="hover-button-icon uil uil-graduation-cap"></span>
+                <span class="hover-button-text">
+                  Enroll Now
+                </span>
+              </button>
+            </div>
+          </div>
+          <style>
+            .block.hover {
+              background: #383941;
+            }
+
+            .hover-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              height: 4rem;
+              padding: 0 1.875rem 0 1.5rem;
+              border-radius: 0.5rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #222227;
+              transition: background 0.375s;
+            }
+
+            /* Styles when mouse is over */
+            .hover-button:hover {
+              background: #16161a;
+            }
+
+            .hover-button-icon {
+              font-size: 1.5rem;
+            }
+
+            .hover-button-text {
+              font-size: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block focus">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :focus
+            </h2>
+            <div class="block-component">
+              <button class="focus-button">
+                <span class="focus-button-icon uil uil-graduation-cap"></span>
+                <span class="focus-button-text">
+                  Enroll Now
+                </span>
+              </button>
+            </div>
+          </div>
+          <style>
+            .block.focus {
+              background: #222227;
+            }
+
+            .focus-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              height: 4rem;
+              padding: 0 1.875rem 0 1.5rem;
+              border-radius: 0.5rem;
+              border: 2px solid #222227;
+              background: #131315;
+              color: rgba(255, 255, 255, 0.96);
+              transition: border-color 0.35s;
+            }
+
+            /* Styles when element is focused */
+            .focus-button:focus {
+              border-color: #8f44fd;
+            }
+
+            .focus-button-icon {
+              font-size: 1.5rem;
+            }
+
+            .focus-button-text {
+              font-size: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block focus-input">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :focus
+            </h2>
+            <div class="block-component">
+              <span class="focus-textbox">
+                <input
+                  type="password"
+                  value="Password1"
+                  class="focus-textbox-input"
+                  placeholder="Password"
+                />
+                <span class="focus-textbox-icon uil uil-padlock"></span>
+              </span>
+            </div>
+          </div>
+          <style>
+            .block.focus-input {
+              background: #f7f7fe;
+            }
+
+            .block.focus-input .block-title {
+              color: #4c4954;
+            }
+
+            .focus-textbox {
+              position: relative;
+            }
+
+            .focus-textbox-icon {
+              position: absolute;
+              top: 50%;
+              left: 1rem;
+              transform: translateY(-50%);
+              display: grid;
+              place-items: center;
+              flex: 0 0 4rem;
+              font-size: 1.5rem;
+              color: #a19eab;
+            }
+
+            .focus-textbox-input {
+              width: 12rem;
+              height: 4rem;
+              padding-left: 3.5rem;
+              padding-right: 1rem;
+              border-radius: 0.5rem;
+              border: 2px solid #d6cdd7;
+              background: #ffffff;
+            }
+
+            /* Styles when the input is focused  */
+            .focus-textbox-input:focus {
+              border-color: #8f44fd;
+            }
+
+            /* Target icon using general siblings selector */
+            .focus-textbox-input:focus ~ .focus-textbox-icon {
+              color: #8f44fd;
+            }
+          </style>
+        </article>
+        <article class="block disabled">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :disabled
+            </h2>
+            <div class="block-component">
+              <!-- The disabled property will affect our CSS -->
+              <button class="disabled-button" disabled>
+                <span
+                  class="disabled-button-icon uil uil-graduation-cap"
+                ></span>
+                <span class="disabled-button-text">
+                  Enrollment Closed
+                </span>
+              </button>
+            </div>
+          </div>
+          <style>
+            .block.disabled {
+              background: #383941;
+            }
+
+            .disabled-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              height: 4rem;
+              padding: 0 1.875rem 0 1.5rem;
+              border-radius: 0.5rem;
+              background: #131315;
+              color: rgba(255, 255, 255, 0.96);
+              transition: border-color 0.35s;
+            }
+
+            /* Styles when element is disabled */
+            .disabled-button:disabled {
+              background: #2e2f35;
+              color: rgba(255, 255, 255, 0.06);
+              cursor: not-allowed;
+            }
+
+            .disabled-button-icon {
+              font-size: 1.5rem;
+            }
+
+            .disabled-button-text {
+              font-size: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block first-child">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :first-child
+            </h2>
+            <div class="block-component">
+              <header class="first-child-header">
+                <h2 class="first-child-title">Home</h2>
+                <nav class="first-child-nav">
+                  <button
+                    class="first-child-menu-button uil uil-estate"
+                  ></button>
+                  <button class="first-child-menu-button uil uil-cog"></button>
+                  <button class="first-child-menu-button uil uil-plus"></button>
+                </nav>
+              </header>
+            </div>
+          </div>
+          <style>
+            .block.first-child {
+              background: #8f44fd;
+            }
+
+            .first-child-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 26rem;
+              height: 4rem;
+              padding: 0 1rem;
+              border-radius: 4px;
+              color: #f9f9f9;
+              background: #222227;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .first-child-title {
+              font-size: 1rem;
+            }
+
+            .first-child-nav {
+              display: flex;
+              gap: 0.5rem;
+            }
+
+            .first-child-menu-button {
+              width: 2rem;
+              height: 2rem;
+              color: #a19eab;
+              font-size: 1.25rem;
+              transition: color 0.35s;
+            }
+
+            /* Styles for the first menu button */
+            .first-child-menu-button:first-child {
+              border-radius: 50%;
+              color: #f9f9f9;
+              background: #8f44fd;
+            }
+
+            /* Ignore the first menu button in hover styles */
+            .first-child-menu-button:not(:first-child):hover {
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block last-child">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :last-child
+            </h2>
+            <div class="block-component">
+              <header class="last-child-header">
+                <h2 class="last-child-title">Home</h2>
+                <nav class="last-child-nav">
+                  <button
+                    class="last-child-menu-button uil uil-estate"
+                  ></button>
+                  <button class="last-child-menu-button uil uil-cog"></button>
+                  <button class="last-child-menu-button uil uil-plus"></button>
+                </nav>
+              </header>
+            </div>
+          </div>
+          <style>
+            .block.last-child {
+              background: #383941;
+            }
+
+            .last-child-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 26rem;
+              height: 4rem;
+              padding: 0 1rem;
+              border-radius: 4px;
+              color: #f9f9f9;
+              background: #222227;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .last-child-title {
+              font-size: 1rem;
+            }
+
+            .last-child-nav {
+              display: flex;
+              gap: 0.5rem;
+            }
+
+            .last-child-menu-button {
+              display: flex;
+              align-items: center;
+              padding-right: 0.75rem;
+              height: 1.5rem;
+              border-right: 1px solid #3a3a3f;
+              color: #a19eab;
+              font-size: 1.25rem;
+              transition: color 0.35s;
+            }
+
+            /* Styles for the last menu button */
+            .last-child-menu-button:last-child {
+              border: 0;
+              padding: 0; /* We can also remove padding */
+            }
+
+            .last-child-menu-button:hover {
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block not">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :not()
+            </h2>
+            <div class="block-component">
+              <header class="not-header">
+                <h2 class="not-title">Home</h2>
+                <nav class="not-nav">
+                  <button class="not-menu-button uil uil-estate"></button>
+                  <button class="not-menu-button uil uil-cog"></button>
+                  <button class="not-menu-button uil uil-plus"></button>
+                </nav>
+              </header>
+            </div>
+          </div>
+          <style>
+            .block.not {
+              background: #222227;
+            }
+
+            .not-header {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 26rem;
+              height: 4rem;
+              padding: 0 1rem;
+              border-radius: 4px;
+              color: #f9f9f9;
+              background: linear-gradient(45deg, #5344fd, #446dfd);
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .not-title {
+              font-size: 1rem;
+            }
+
+            .not-nav {
+              display: flex;
+              gap: 0.5rem;
+            }
+
+            .not-menu-button {
+              display: flex;
+              align-items: center;
+              height: 1.5rem;
+              color: rgba(255, 255, 255, 0.5);
+              font-size: 1.25rem;
+              transition: color 0.35s;
+            }
+
+            /* Styles for all buttons except the last child */
+            .not-menu-button:not(:last-child) {
+              padding-right: 0.75rem;
+              border-right: 1px solid rgba(255, 255, 255, 0.25);
+            }
+
+            .not-menu-button:hover {
+              color: #f9f9f9;
+            }
+          </style>
+        </article>
+        <article class="block nth-child">
+          <div class="block-inner">
+            <h2 class="block-title">
+              :nth-child()
+            </h2>
+            <div class="block-component">
+              <div class="nth-child-card">
+                <table class="nth-child-table nth-child-table--collapse">
+                  <thead>
+                    <tr>
+                      <th>
+                        User
+                      </th>
+                      <th>
+                        Age
+                      </th>
+                      <th>
+                        Grade
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Elvis Harris</td>
+                      <td>
+                        24
+                      </td>
+                      <td>
+                        87%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Claire Hatcliffe</td>
+                      <td>
+                        31
+                      </td>
+                      <td>
+                        83%
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Kerry Keenan</td>
+                      <td>
+                        43
+                      </td>
+                      <td>
+                        80%
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.nth-child {
+              background: #f7f7fe;
+            }
+
+            .block.nth-child .block-title {
+              color: #4c4954;
+            }
+
+            .nth-child-card {
+              width: 26rem;
+              line-height: 1;
+              padding: 1rem 0;
+              border-radius: 0.75rem;
+              border: 2px solid #dedede;
+              background: #ffffff;
+              color: #45424d;
+            }
+
+            .nth-child-table {
+              width: 100%;
+            }
+
+            .nth-child-table .material-icons {
+              color: #a19eab;
+            }
+
+            /* Style the odd rows in the table only */
+            .nth-child-table tbody tr:nth-child(odd) {
+              background: #f7f7fe;
+            }
+
+            .nth-child-table th {
+              font-weight: 400;
+              font-size: 0.875rem;
+              color: #a19eab;
+              height: 1.75rem;
+              vertical-align: top;
+            }
+
+            .nth-child-table th,
+            .nth-child-table td {
+              padding: 0.5rem;
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

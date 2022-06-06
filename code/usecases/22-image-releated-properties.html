@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image Related Properties</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        Image Related Properties
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block height-width">
+          <div class="block-inner">
+            <h2 class="block-title">height and width</h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <img
+                  class="height-width-image correct"
+                  src="../assets/img/people.png"
+                />
+                <img
+                  class="height-width-image incorrect"
+                  src="../assets/img/people.png"
+                />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.height-width {
+              background: #373942;
+            }
+
+            .height-width-image.correct {
+              height: 6rem;
+            }
+
+            .height-width-image.incorrect {
+              height: 6rem;
+              width: 6rem;
+            }
+          </style>
+        </article>
+        <article class="block object-fit-cover">
+          <div class="block-inner">
+            <h2 class="block-title">object-fit: cover</h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <img class="avatar-image" src="../assets/img/people.png" />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.object-fit-cover {
+              background: #222227;
+            }
+
+            .avatar-image {
+              width: 6rem;
+              height: 6rem;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          </style>
+        </article>
+        <article class="block object-fit-contain">
+          <div class="block-inner">
+            <h2 class="block-title">
+              object-fit: contain
+            </h2>
+            <div class="block-component">
+              <div class="team-wrapper">
+                <div class="team-content">
+                  <img
+                    class="team-image incorrect"
+                    src="../assets/img/football-team-chelmsley.png"
+                  />
+
+                  <img
+                    class="team-image incorrect"
+                    src="../assets/img/football-team-coleshill.png"
+                  />
+                </div>
+              </div>
+
+              <div class="team-wrapper">
+                <div class="team-content">
+                  <img
+                    class="team-image correct"
+                    src="../assets/img/football-team-chelmsley.png"
+                  />
+
+                  <img
+                    class="team-image correct"
+                    src="../assets/img/football-team-coleshill.png"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.object-fit-contain {
+              background: #373942;
+            }
+
+            .team-wrapper {
+              position: relative;
+              overflow: hidden;
+              width: 13rem;
+              margin: 0 0.5rem;
+              padding: 1rem;
+              background: #2c2d32;
+            }
+
+            .team-wrapper::after {
+              content: "";
+              position: absolute;
+              z-index: 0;
+              top: 0;
+              left: 50%;
+              width: 100%;
+              height: 100%;
+              background: #232326;
+              transform: skewX(-45deg);
+            }
+
+            .team-content {
+              position: relative;
+              z-index: 1;
+              display: flex;
+              gap: 5rem;
+              align-items: center;
+              justify-content: center;
+            }
+
+            .team-image {
+              width: 3rem;
+              height: 3rem;
+            }
+
+            .team-image.incorrect {
+              object-fit: cover;
+            }
+
+            .team-image.correct {
+              object-fit: contain;
+            }
+          </style>
+        </article>
+        <article class="block padding-border">
+          <div class="block-inner">
+            <h2 class="block-title">padding and border</h2>
+            <div class="block-component">
+              <img
+                class="padding-border-image"
+                src="../assets/img/people.png"
+              />
+            </div>
+          </div>
+          <style>
+            .block.padding-border {
+              background: #8f44fd;
+            }
+
+            .padding-border-image {
+              width: 6rem;
+              height: 6rem;
+              padding: 5px;
+              border-radius: 50%;
+              border: 2px solid rgba(255, 255, 255, 0.2);
+              object-fit: cover;
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

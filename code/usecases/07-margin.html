@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>margin</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        margin
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <article class="block longhand">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Longhand
+            </h2>
+            <div class="block-component">
+              <div class="longhand-card">
+                <aside class="longhand-sidebar"></aside>
+                <main class="longhand-body">
+                  <span class="skeleton-rect-xl"></span>
+                  <span class="skeleton-rect-md"></span>
+                  <span class="skeleton-rect-sm"></span>
+                  <br />
+                  <span class="skeleton-rect-lg"></span>
+                  <span class="skeleton-rect-sm"></span>
+                </main>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.longhand {
+              background: #222227;
+            }
+
+            .longhand-card {
+              position: relative;
+              width: 24rem;
+              height: 10rem;
+              color: #4c4954;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .longhand-sidebar {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              width: 6rem;
+              height: 100%;
+              background: #000000;
+            }
+
+            .longhand-body {
+              padding: 1rem;
+              margin-left: 6rem;
+              font-size: 0.75rem;
+            }
+          </style>
+        </article>
+        <article class="block shorthand">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Shorthand
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <div class="shorthand-card">
+                  <span class="shorthand-card-icon uil uil-coffee"></span>
+                  <p>
+                    Time for a coffee!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.shorthand {
+              background: #373941;
+            }
+
+            .shorthand-card {
+              display: flex;
+              flex-direction: column;
+              width: 16rem;
+              background: #958058;
+              color: #f9f9f9;
+              font-size: 1rem;
+            }
+
+            .shorthand-card p {
+              margin: 0 1rem 1rem;
+            }
+
+            .shorthand-card-icon {
+              display: grid;
+              place-items: center;
+              width: 1.75rem;
+              height: 1.75rem;
+              margin: 1rem;
+              border-radius: 50%;
+              background: rgba(0, 0, 0, 0.16);
+              font-size: 1rem;
+            }
+          </style>
+        </article>
+        <article class="block shorthand-2">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Shorthand (2)
+            </h2>
+            <div class="block-component">
+              <div class="shorthand-2-card">
+                <aside class="shorthand-2-sidebar"></aside>
+                <main class="responsive-body">
+                  <section class="shorthand-2-container">
+                    <span class="skeleton-rect-xl"></span>
+                    <span class="skeleton-rect-md"></span>
+                    <span class="skeleton-rect-sm"></span>
+                    <br />
+                    <span class="skeleton-rect-lg"></span>
+                    <span class="skeleton-rect-sm"></span>
+                  </section>
+                </main>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.shorthand-2 {
+              background: #373942;
+            }
+
+            .shorthand-2-card {
+              overflow: hidden;
+              position: relative;
+              width: 24rem;
+              height: 10rem;
+              color: #4c4954;
+              background: #e7e7e7;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .shorthand-2-sidebar {
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              width: 2rem;
+              height: 100%;
+              background: #000000;
+            }
+
+            .responsive-body {
+              margin-left: 2rem;
+              font-size: 0.75rem;
+            }
+
+            /* Set top/bottom and left/right by adding two lengths */
+            .shorthand-2-container {
+              width: 16rem;
+              margin: 0 auto; /* auto will apply an equal margin on that side */
+              padding: 1rem;
+              background: #ffffff;
+            }
+          </style>
+        </article>
+        <article class="block shorthand-3">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Shorthand (3)
+            </h2>
+            <div class="block-component">
+              <div class="shorthand-3-card">
+                <img
+                  class="shorthand-3-img"
+                  src="../assets/img/frontendjoe-border.png"
+                />
+                <div>
+                  <h2 class="shorthand-3-h2">
+                    Joe Harrison
+                  </h2>
+                  <h3 class="shorthand-3-h3">
+                    @frontendjoe
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.shorthand-3 {
+              background: #f7f7fe;
+            }
+
+            .block.shorthand-3 .block-title {
+              color: #4c4954;
+            }
+
+            .shorthand-3-card {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem;
+              padding: 1rem;
+              min-width: 16rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .shorthand-3-img {
+              width: 3rem;
+              height: 3rem;
+            }
+
+            /* Reset margin and apply margin-bottom using shorthand (3) */
+            .shorthand-3-h2 {
+              margin: 0 0 2px;
+              line-height: 1; /* Setting line-height to 1 ensures margin is fully honoured */
+              font-weight: 600;
+              font-size: 1.175rem;
+            }
+
+            .shorthand-3-h3 {
+              margin: 0;
+              line-height: 1;
+              font-weight: 600;
+              font-size: 1.075rem;
+              color: #a19eab;
+            }
+          </style>
+        </article>
+        <article class="block longhand-vs-shorthand">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Longhand vs Shorthand (4)
+            </h2>
+            <div class="block-component">
+              <div class="longhand-vs-shorthand-card">
+                <img
+                  class="longhand-vs-shorthand-img"
+                  src="../assets/img/dan.png"
+                />
+                <div>
+                  <h2 class="longhand-vs-shorthand-h2">
+                    Dan Romero
+                  </h2>
+                  <h3 class="longhand-vs-shorthand-h3">
+                    15 July 2021 · 9pm
+                  </h3>
+                </div>
+                <i class="longhand-vs-shorthand-icon uil uil-ellipsis-v"></i>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.longhand-vs-shorthand {
+              background: #222227;
+            }
+
+            .longhand-vs-shorthand-card {
+              display: grid;
+              grid-template-columns: auto auto auto;
+              align-items: center;
+              padding: 1.25rem;
+              border-radius: 0.5rem;
+              background: #141415;
+            }
+
+            .longhand-vs-shorthand-img {
+              width: 3rem;
+              height: 3rem;
+              margin-right: 1rem;
+            }
+
+            .longhand-vs-shorthand-h2 {
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .longhand-vs-shorthand-h3 {
+              font-size: 0.75rem;
+              color: rgba(255, 255, 255, 0.57);
+            }
+
+            .longhand-vs-shorthand-icon {
+              display: grid;
+              place-items: center;
+              width: 2rem;
+              height: 2rem;
+              margin-left: 1.5rem;
+              margin-right: 0.5rem;
+              font-size: 1.5rem;
+              color: #f7f7f7;
+            }
+          </style>
+        </article>
+        <article class="block negative-margin-list">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Negative margins
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <div class="negative-margin-list-card">
+                  <h2 class="negative-margin-list-h2">
+                    Technical skills
+                    <button class="negative-margin-fab uil uil-bars"></button>
+                  </h2>
+
+                  <ul class="negative-margin-list-ul">
+                    <li>
+                      Googling
+                    </li>
+                    <li>
+                      YouTubing
+                    </li>
+                    <li>
+                      Stack overflowing
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.negative-margin-list {
+              background: #141415;
+            }
+
+            .negative-margin-list-card {
+              display: flex;
+              flex-direction: column;
+              width: 18rem;
+              border-radius: 0.75rem 0.75rem 0.5rem 0.5rem;
+              background: #ffffff;
+              color: rgba(0, 0, 0, 0.75);
+            }
+
+            .negative-margin-list-ul {
+              list-style: "🏆";
+              margin: 1rem 0;
+              padding: 0 0 0 2rem;
+            }
+
+            .negative-margin-list-ul > li {
+              padding-left: 0.5rem;
+            }
+
+            .negative-margin-list-h2 {
+              position: relative;
+              padding: 1rem;
+              font-size: 1rem;
+              border-top-left-radius: 0.5rem;
+              border-top-right-radius: 0.5rem;
+              background: #2c2d33;
+              color: white;
+            }
+
+            /* Use negative margins alongside position to center elements on themselves */
+            .negative-margin-fab {
+              position: absolute;
+              bottom: 0;
+              right: 1rem;
+              width: 3rem;
+              height: 3rem;
+              margin-bottom: -1.5rem; /* Notice how the negative margin is exactly half the height of the element */
+              border-radius: 50%;
+              font-size: 1.25rem;
+              background: #f03ec9;
+              color: rgba(255, 255, 255, 0.96);
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1155 @@
+flex-shrink<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>display: flex</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="../assets/img/favicon.png"
+    />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" />
+    <link rel="stylesheet" href="../assets/css/skeletons.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="/usecases" class="page-header-back page-header-end">
+        <span class="uil uil-arrow-left"></span>
+        <span>
+          Back
+        </span>
+      </a>
+      <h2 class="page-header-title">
+        display: flex
+      </h2>
+      <span class="page-header-end"></span>
+    </header>
+    <div class="container">
+      <section class="block-list">
+        <!-- flex container use cases -->
+        <article class="block display-flex">
+          <div class="block-inner">
+            <h2 class="block-title">
+              display: flex
+            </h2>
+            <div class="block-component">
+              <div class="display-flex-wrapper">
+                <input class="display-flex-input" placeholder="Search" />
+                <button class="display-flex-button uil uil-search"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.display-flex {
+              background: #f7f7fe;
+            }
+
+            .block.display-flex .block-title {
+              color: #4c4954;
+            }
+
+            .display-flex-wrapper {
+              display: flex; /* Setting this wrapper to display: flex; will force elements to display in a horizontal row */
+              height: 3.75rem;
+              border-top-left-radius: 0.5rem;
+              border-bottom-left-radius: 0.5rem;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .display-flex-input {
+              width: 10rem;
+              font-size: 1rem;
+              padding: 0 1rem;
+            }
+
+            .display-flex-button {
+              width: 4rem;
+              border-top-right-radius: 0.5rem;
+              border-bottom-right-radius: 0.5rem;
+              background: #8f44fd;
+              color: rgba(255, 255, 255, 0.96);
+              font-size: 1.25rem;
+            }
+          </style>
+        </article>
+        <article class="block flex-direction">
+          <div class="block-inner">
+            <h2 class="block-title">
+              flex-direction
+            </h2>
+            <div class="block-component">
+              <button class="flex-direction-button">
+                <span class="flex-direction-button-icon uil uil-rocket"></span>
+                <span class="flex-direction-button-text">
+                  LAUNCH
+                </span>
+              </button>
+            </div>
+          </div>
+          <style>
+            .block.flex-direction {
+              background: #222227;
+            }
+
+            .flex-direction-button {
+              display: flex;
+              gap: 0.5rem;
+              flex-direction: column; /* Try toggling this to column-reverse */
+              align-items: center; /* Ensure flex items are centered */
+              justify-content: center; /* Ensure flex items are centered */
+              width: 6rem;
+              height: 6rem;
+              border-radius: 0.5rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+              font-weight: 600;
+              letter-spacing: 1px;
+              font-size: 0.825rem;
+            }
+
+            .flex-direction-button-icon {
+              font-size: 1.875rem;
+            }
+
+            .flex-direction-button-text {
+              line-height: 1;
+            }
+          </style>
+        </article>
+        <article class="block row-reverse">
+          <div class="block-inner">
+            <h2 class="block-title">
+              row-reverse (resize window)
+            </h2>
+            <div class="block-component">
+              <div class="row-reverse-wrapper">
+                <img src="../assets/img/mountains.png" />
+                <div>
+                  <div class="skeleton-rect-md"></div>
+                  <div class="skeleton-rect-sm"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.row-reverse {
+              background: #8f44fd;
+            }
+
+            .row-reverse-wrapper {
+              width: 10rem;
+              padding: 1.25rem 1rem 0.5rem;
+              background: #060609;
+            }
+
+            .row-reverse-wrapper img {
+              width: 100%;
+              margin-bottom: 0.5rem;
+            }
+
+            /* Simple media query example, we only flex when screen is bigger than 48rem */
+            @media (min-width: 48rem) {
+              .row-reverse-wrapper {
+                width: 18rem;
+                display: flex;
+                flex-direction: row-reverse;
+              }
+
+              .row-reverse-wrapper img {
+                width: 10rem;
+                padding: 0 0 0 1rem;
+              }
+            }
+          </style>
+        </article>
+        <article class="block gap">
+          <div class="block-inner">
+            <h2 class="block-title">
+              gap
+            </h2>
+            <div class="block-component">
+              <div class="gap-card">
+                <img class="gap-img" src="../assets/img/frontendjoe.png" />
+                <div>
+                  <h2 class="gap-h2">
+                    Joe Harrison
+                  </h2>
+                  <h3 class="gap-h3">
+                    @frontendjoe
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.gap {
+              background: #222227;
+            }
+
+            .gap-card {
+              display: flex;
+              align-items: center;
+              gap: 0.75rem; /* Will apply a gap between flex items */
+              padding: 0 1rem; /* We still require padding to add a gap at each end */
+              width: 14rem;
+              height: 5rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #18181b;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .gap-img {
+              width: 3rem;
+              height: 3rem;
+            }
+
+            .gap-h2 {
+              margin: 0 0 2px;
+              line-height: 1;
+              font-weight: 600;
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .gap-h3 {
+              margin: 0;
+              line-height: 1;
+              font-weight: 600;
+              font-size: 0.875rem;
+              color: rgba(255, 255, 255, 0.5);
+            }
+          </style>
+        </article>
+        <article class="block flex-wrap">
+          <div class="block-inner">
+            <h2 class="block-title">
+              flex-wrap
+            </h2>
+            <div class="block-component">
+              <div class="flex-wrap-wrapper">
+                <span class="flex-wrap-chip flex-wrap-chip--purple">
+                  T-Shirts
+                </span>
+                <span class="flex-wrap-chip flex-wrap-chip--blue">
+                  Sweatshirts
+                </span>
+                <span class="flex-wrap-chip flex-wrap-chip--indigo">
+                  Boxers
+                </span>
+                <span class="flex-wrap-chip flex-wrap-chip--indigo">
+                  Trainers
+                </span>
+                <span class="flex-wrap-chip flex-wrap-chip--purple">
+                  Coats & Hoodies
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.flex-wrap {
+              background: #222227;
+            }
+
+            .flex-wrap-wrapper {
+              display: flex;
+              flex-wrap: wrap; /* Ignore normal flex behaviour and wrap to new line when needed */
+              gap: 0.75rem; /* Will apply a gap both horizontally and vertically */
+              width: 20rem; /* Width must be set unless defined by it's parent */
+              border-radius: 0.5rem;
+              color: #4c4954;
+            }
+
+            .flex-wrap-chip {
+              display: grid;
+              place-items: center;
+              height: 2rem;
+              padding: 0 1rem;
+              border-radius: 1rem;
+              font-size: 0.75rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .flex-wrap-chip--blue {
+              background: #30a1ff;
+            }
+
+            .flex-wrap-chip--purple {
+              background: #8438eb;
+            }
+
+            .flex-wrap-chip--indigo {
+              background: #5c0ddd;
+            }
+          </style>
+        </article>
+        <article class="block justify-content">
+          <div class="block-inner">
+            <h2 class="block-title">
+              justify-content
+            </h2>
+            <div class="block-component">
+              <div class="justify-content-wrapper">
+                <span class="justify-content-chip justify-content-chip--purple">
+                  T-Shirts
+                </span>
+                <span class="justify-content-chip justify-content-chip--blue">
+                  Sweatshirts
+                </span>
+                <span class="justify-content-chip justify-content-chip--indigo">
+                  Boxers
+                </span>
+                <span class="justify-content-chip justify-content-chip--indigo">
+                  Trainers
+                </span>
+                <span class="justify-content-chip justify-content-chip--purple">
+                  Coats & Hoodies
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.justify-content {
+              background: #373942;
+            }
+
+            .justify-content-wrapper {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center; /* Center the content on X axis */
+              gap: 0.75rem;
+              width: 20rem; /* Width must be set unless defined by it's parent */
+              border-radius: 0.5rem;
+              color: #4c4954;
+            }
+
+            .justify-content-chip {
+              display: grid;
+              place-items: center;
+              height: 2rem;
+              padding: 0 1rem;
+              border-radius: 1rem;
+              font-size: 0.75rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .justify-content-chip--blue {
+              background: #30a1ff;
+            }
+
+            .justify-content-chip--purple {
+              background: #8438eb;
+            }
+
+            .justify-content-chip--indigo {
+              background: #5c0ddd;
+            }
+          </style>
+        </article>
+        <article class="block space-between">
+          <div class="block-inner">
+            <h2 class="block-title">
+              space-between
+            </h2>
+            <div class="block-component">
+              <nav class="space-between-card">
+                <button class="space-between-burger uil uil-bars"></button>
+                <nav class="space-between-menu">
+                  <button class="space-between-menus-button">
+                    Home
+                  </button>
+                  <button class="space-between-menus-button">
+                    About
+                  </button>
+                  <button class="space-between-menus-button">
+                    Contact
+                  </button>
+                </nav>
+              </nav>
+            </div>
+          </div>
+          <style>
+            .block.space-between {
+              background: #8f44fd;
+            }
+
+            .space-between-card {
+              display: flex;
+              align-items: center;
+              justify-content: space-between; /* Fill remaining space between X axis elements */
+              width: 26rem; /* Width must be set unless defined by it's parent */
+              padding: 1rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .space-between-burger {
+              font-size: 1.5rem;
+            }
+
+            .space-between-menu {
+              display: flex;
+              gap: 0.5rem;
+            }
+
+            .space-between-menus-button {
+              color: #a19eab;
+              font-size: 0.875rem;
+              transition: color 0.35s;
+            }
+
+            .space-between-menus-button:hover {
+              color: #45424d;
+            }
+          </style>
+        </article>
+        <article class="block space-evenly">
+          <div class="block-inner">
+            <h2 class="block-title">
+              space-evenly
+            </h2>
+            <div class="block-component">
+              <div class="space-evenly-wrapper">
+                <span class="space-evenly-icon material-icons">
+                  star
+                </span>
+                <span class="space-evenly-icon material-icons">
+                  star
+                </span>
+                <span class="space-evenly-icon material-icons">
+                  star
+                </span>
+                <span
+                  class="space-evenly-icon space-evenly-icon--disabled material-icons"
+                >
+                  star
+                </span>
+                <span
+                  class="space-evenly-icon space-evenly-icon--disabled material-icons"
+                >
+                  star
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.space-evenly {
+              background: #222227;
+            }
+
+            .space-evenly-wrapper {
+              display: flex;
+              justify-content: space-evenly; /* Apply equal space - before, between and after elements */
+              width: 16rem;
+            }
+
+            .space-evenly-icon {
+              font-size: 2.25rem;
+              color: #bdb287;
+            }
+
+            .space-evenly-icon--disabled {
+              opacity: 0.25;
+            }
+          </style>
+        </article>
+        <article class="block space-around">
+          <div class="block-inner">
+            <h2 class="block-title">
+              space-around
+            </h2>
+            <div class="block-component">
+              <div class="space-around-wrapper">
+                <img
+                  class="space-around-img"
+                  src="../assets/img/dashboard-card-1.png"
+                />
+                <img
+                  class="space-around-img"
+                  src="../assets/img/dashboard-card-2.png"
+                />
+                <img
+                  class="space-around-img"
+                  src="../assets/img/dashboard-card-3.png"
+                />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.space-around {
+              background: #373942;
+            }
+
+            .space-around-wrapper {
+              display: flex;
+              justify-content: space-around; /* Apply equal space between elements, the space at each end will be half the size of the gap between */
+              width: 28rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #2c2d33;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .space-around-img {
+              flex: 1 1 auto;
+              min-width: 0;
+            }
+          </style>
+        </article>
+        <article class="block align-items">
+          <div class="block-inner">
+            <h2 class="block-title">
+              align-items
+            </h2>
+            <div class="block-component">
+              <div class="block-vs">
+                <button class="flex-button">
+                  <span class="flex-button-text">
+                    MORE INFO
+                  </span>
+                  <span class="flex-button-icon uil uil-angle-right"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.align-items {
+              background: #222227;
+            }
+
+            .flex-button {
+              display: flex;
+              gap: 1rem;
+              align-items: center;
+              justify-content: center;
+              height: 4rem;
+              padding: 0 1.25rem 0 1.75rem;
+              border-radius: 3px;
+              color: rgba(255, 255, 255, 0.96);
+              background: #549ef8;
+            }
+
+            .flex-button-icon {
+              font-size: 1.65rem;
+            }
+
+            .flex-button-text {
+              line-height: 1;
+              font-size: 1rem;
+              font-weight: 600;
+              letter-spacing: 1px;
+            }
+          </style>
+        </article>
+
+        <!-- flex item use cases -->
+        <article class="block flex-grow">
+          <div class="block-inner">
+            <h2 class="block-title">
+              flex-grow
+            </h2>
+            <div class="block-component">
+              <div class="flex-grow-card">
+                <button class="uil uil-estate"></button>
+                <button class="uil uil-cog"></button>
+                <button class="uil uil-tag"></button>
+                <button class="uil uil-plus"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.flex-grow {
+              background: #f7f7fe;
+            }
+
+            .block.flex-grow .block-title {
+              color: #4c4954;
+            }
+
+            .flex-grow-card {
+              display: flex;
+              width: 12rem;
+              height: 3.5rem;
+              padding: 0 0.5rem;
+              border-top-left-radius: 0.5rem;
+              border-top-right-radius: 0.5rem;
+              background: #46465a;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .flex-grow-card .uil {
+              /* Will grow to 1 fraction (4 items = 25%) of it's container */
+              flex-grow: 1; /* Try toggling this back to 0 (default value) */
+              color: rgba(255, 255, 255, 0.57);
+              font-size: 1.25rem;
+              transition: color 0.35s;
+            }
+
+            .uil:hover {
+              color: rgba(255, 255, 255, 0.96);
+            }
+          </style>
+        </article>
+        <article class="block flex-shrink">
+          <div class="block-inner">
+            <h2 class="block-title">
+              flex-shrink
+            </h2>
+            <div class="block-component">
+              <div class="flex-shrink-wrapper">
+                <div class="flex-shrink-text">
+                  Search
+                </div>
+                <button class="flex-shrink-icon uil uil-search"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.flex-shrink {
+              background: #222227;
+            }
+
+            .flex-shrink-wrapper {
+              display: flex;
+              align-items: center;
+              height: 3.75rem;
+              width: 12rem;
+              padding: 4px;
+              border-radius: 0.5rem;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+              cursor: pointer;
+            }
+
+            .flex-shrink-text {
+              flex-grow: 2;
+              /* Will shrink to 1 fraction (4 items = 25%) of it's container */
+              flex-shrink: 1; /* Try toggling this back to 0 (default value) - it will still work */
+              font-size: 1rem;
+              padding-left: 1rem;
+            }
+
+            .flex-shrink-icon {
+              flex-grow: 1;
+              flex-shrink: 1;
+              height: 100%;
+              border-radius: 0.5rem;
+              background: #8f44fd;
+              color: rgba(255, 255, 255, 0.96);
+              font-size: 1.25rem;
+            }
+          </style>
+        </article>
+        <article class="block flex-basis">
+          <div class="block-inner">
+            <h2 class="block-title">
+              flex-basis (resize window)
+            </h2>
+            <header class="flex-basis-toolbar">
+              <input
+                class="flex-basis-input"
+                type="text"
+                placeholder="Search"
+              />
+              <nav class="flex-basis-nav">
+                <button class="flex-basis-button uil uil-setting"></button>
+                <button class="flex-basis-button uil uil-tag"></button>
+                <button class="flex-basis-button uil uil-plus"></button>
+              </nav>
+            </header>
+          </div>
+          <style>
+            .block.flex-basis {
+              background: #373942;
+            }
+
+            .flex-basis-toolbar {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 75%;
+              padding: 1rem 0 1rem 1rem;
+              border-radius: 0.25rem;
+              background: #222227;
+            }
+
+            .flex-basis-input {
+              /* Flex item styles relating to itself */
+              flex-grow: 1;
+              flex-shrink: 1;
+              height: 3rem;
+              padding: 0 1rem;
+              border-radius: inherit;
+              background: #424349;
+              color: #f9f9f9;
+              min-width: 0; /* min-width must be set to zero (try commenting it out to see how it breaks) */
+            }
+
+            .flex-basis-nav {
+              /* Flex item styles relating to itself */
+              flex-basis: auto; /* auto ensures width/height properties are used */
+              width: 7rem;
+              max-width: 7rem;
+              min-width: 7rem;
+
+              /* Flex item styles relative to its children */
+              display: flex;
+              align-items: center;
+              justify-content: space-evenly;
+            }
+
+            .flex-basis-button {
+              font-size: 1.25rem;
+            }
+          </style>
+        </article>
+        <article class="block align-self">
+          <div class="block-inner">
+            <h2 class="block-title">
+              align-self
+            </h2>
+            <div class="block-component">
+              <div class="email-card">
+                <span class="email-icon uil uil-envelope"></span>
+                <input class="email-input" placeholder="Email Address" />
+                <span class="email-info">?</span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.align-self {
+              background: #373942;
+            }
+
+            .email-card {
+              display: flex;
+              gap: 0.7rem;
+              align-items: center;
+              padding: 1rem;
+              height: 5rem;
+              background: #232428;
+            }
+
+            .email-input {
+              width: 12rem;
+              color: #f9f9f9;
+            }
+
+            .email-icon {
+              color: #f9f9f9;
+              font-size: 1.5rem;
+            }
+
+            .email-info {
+              /* Change the value set by the container (center) so the icon appears up top */
+              align-self: flex-start; /* Try toggling this to flex-end */
+              display: grid;
+              place-items: center;
+              width: 1rem;
+              height: 1rem;
+              border-radius: 50%;
+              background: #8f44fd;
+              color: #f9f9f9;
+              font-size: 0.7rem;
+            }
+          </style>
+        </article>
+
+        <!-- Extra use cases -->
+        <article class="block advanced">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Advanced menu (resize window)
+            </h2>
+            <nav class="advanced-nav">
+              <button class="advanced-nav-button uil uil-bars"></button>
+              <h2 class="advanced-nav-h2">Page Title</h2>
+              <button class="advanced-nav-button uil uil-user-circle"></button>
+            </nav>
+          </div>
+          <style>
+            .block.advanced {
+              background: #222227;
+            }
+
+            .advanced-nav {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              height: 4rem;
+              width: 75%;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #100f10;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .advanced-nav-button {
+              flex: 0 0 4rem;
+              font-size: 1.75rem;
+              color: rgba(255, 255, 255, 0.57);
+              transition: color 0.35s;
+            }
+
+            .advanced-nav-button:hover {
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .advanced-nav-h2 {
+              font-size: 1rem;
+              color: rgba(255, 255, 255, 0.96);
+            }
+          </style>
+        </article>
+        <article class="block vertical-nav">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Vertical menus
+            </h2>
+            <div class="block-component">
+              <nav class="vertical-nav-wrapper">
+                <button class="vertical-nav-button uil uil-estate"></button>
+                <nav class="vertical-nav-subnav">
+                  <button class="vertical-nav-button uil uil-plus"></button>
+                  <button class="vertical-nav-button uil uil-pen"></button>
+                  <button class="vertical-nav-button uil uil-setting"></button>
+                </nav>
+                <button class="vertical-nav-button uil uil-power"></button>
+              </nav>
+            </div>
+          </div>
+          <style>
+            .block.vertical-nav {
+              background: #8f44fd;
+            }
+
+            .vertical-nav-wrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 3rem;
+              height: 14rem;
+              padding: 0.75rem 0;
+              border-radius: 0.25rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #222227;
+            }
+
+            .vertical-nav-button {
+              height: 2rem;
+              font-size: 0.875rem;
+              color: rgba(255, 255, 255, 0.57);
+              transition: color 0.35s;
+            }
+
+            .vertical-nav-button:hover {
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .vertical-nav-subnav {
+              display: flex;
+              flex-direction: column;
+            }
+          </style>
+        </article>
+        <article class="block split-button">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Split buttons
+            </h2>
+            <div class="block-component">
+              <div class="split-button-wrapper">
+                <button class="split-button-lg">
+                  <span class="split-button-lg-icon uil uil-save"></span>
+                  <span class="split-button-lg-text">Save All</span>
+                </button>
+                <button class="split-button-sm uil uil-angle-down"></button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.split-button {
+              background: #222227;
+            }
+
+            .block.search .block-title {
+              color: #4c4954;
+            }
+
+            .split-button-wrapper {
+              display: flex;
+              width: 14rem;
+              height: 4rem;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .split-button-lg {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              flex: 1 1 auto;
+              padding: 0 1rem;
+              border-top-left-radius: 0.5rem;
+              border-bottom-left-radius: 0.5rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #10977e;
+            }
+
+            .split-button-lg-icon {
+              font-size: 1.25rem;
+            }
+
+            .split-button-lg-text {
+              font-size: 1rem;
+            }
+
+            .split-button-sm {
+              flex: 0 0 4rem;
+              font-size: 1.5rem;
+              border-top-right-radius: 0.5rem;
+              border-bottom-right-radius: 0.5rem;
+              background: #0e8771;
+              color: rgba(255, 255, 255, 0.96);
+            }
+          </style>
+        </article>
+        <article class="block rows">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Simple rows
+            </h2>
+            <div class="block-component">
+              <div class="row">
+                <div class="row-text">
+                  Dark Mode
+                </div>
+                <span class="row-icon material-icons">
+                  toggle_on
+                </span>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.rows {
+              background: #373942;
+            }
+
+            .row {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 24rem;
+              height: 3rem;
+              padding: 0 1rem;
+              background: #222227;
+            }
+
+            .row-text {
+              color: rgba(255, 255, 255, 0.96);
+            }
+
+            .row-icon {
+              font-size: 2.5rem;
+              color: #8f44fd;
+            }
+          </style>
+        </article>
+        <article class="block timeline">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Timelines
+            </h2>
+            <div class="block-component">
+              <div class="timeline-wrapper">
+                <button class="timeline-button">
+                  <span class="timeline-step">
+                    <span>1</span>
+                  </span>
+                </button>
+                <button class="timeline-button">
+                  <span class="timeline-step">
+                    <span>2</span>
+                  </span>
+                </button>
+                <button class="timeline-button">
+                  <span class="timeline-step">
+                    <span>3</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.timeline {
+              background: #222227;
+            }
+
+            .timeline-wrapper {
+              display: flex;
+              align-items: center;
+              width: 16rem;
+            }
+
+            .timeline-button {
+              position: relative;
+              flex: 1 1 auto;
+              display: flex;
+              justify-content: center;
+            }
+
+            .timeline-step {
+              position: relative;
+              z-index: 1;
+              display: grid;
+              place-items: center;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+              font-size: 1.25rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #1ac0a2;
+            }
+
+            .timeline-button::after {
+              content: "";
+              position: absolute;
+              z-index: 0;
+              top: 50%;
+              left: 50%;
+              transform: translateY(-50%);
+              height: 4px;
+              width: 100%;
+              background: #1ac0a2;
+            }
+
+            .timeline-button:last-child::after {
+              display: none;
+            }
+
+            .timeline-button:disabled .timeline-step {
+              color: #a19eab;
+            }
+          </style>
+        </article>
+        <article class="block tiles">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Tiles
+            </h2>
+            <div class="block-component">
+              <div class="tiles-wrapper">
+                <img class="tiles-img" src="../assets/img/frontendjoe.png" />
+                <img class="tiles-img" src="../assets/img/dan.png" />
+                <img class="tiles-img" src="../assets/img/mike.png" />
+                <img class="tiles-img" src="../assets/img/eugene.png" />
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.tiles {
+              background: #f7f7fe;
+            }
+
+            .block.tiles .block-title {
+              color: #4c4954;
+            }
+
+            .tiles-wrapper {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 1rem;
+              width: 10rem;
+              padding-left: 1rem;
+            }
+
+            .tiles-img {
+              width: 4rem;
+              height: 4rem;
+            }
+          </style>
+        </article>
+        <article class="block scroll">
+          <div class="block-inner">
+            <h2 class="block-title">
+              Scroll cards
+            </h2>
+            <div class="block-component">
+              <div class="scroll-card">
+                <span class="scroll-icon uil uil-notes"></span>
+                <div class="scroll-content">
+                  <h2 class="scroll-content-h2">
+                    Notes
+                  </h2>
+                  <p class="scroll-content-p">
+                    He was wondering through the dark enchanted forest when he
+                    came across a strange purple coloured tree. This was not any
+                    kind of tree for it was magical and amazing.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            .block.scroll {
+              background: #373942;
+            }
+
+            .scroll-card {
+              overflow: hidden;
+              display: flex;
+              height: 8rem;
+              border-radius: 0.5rem;
+              color: #4c4954;
+              background: #ffffff;
+              box-shadow: 0 45px 75px rgba(58, 35, 91, 0.09);
+            }
+
+            .scroll-icon {
+              display: grid;
+              place-items: center;
+              width: 8rem;
+              font-size: 2.5rem;
+              color: rgba(255, 255, 255, 0.96);
+              background: #8f44fd;
+            }
+
+            .scroll-content {
+              overflow: auto;
+              padding: 1rem;
+              max-width: 16rem;
+              background: white;
+            }
+
+            .scroll-content-h2 {
+              font-size: 1rem;
+              margin-bottom: 0.5rem;
+            }
+
+            .scroll-content-p {
+              margin: 0;
+              color: #a19eab;
+            }
+          </style>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>
